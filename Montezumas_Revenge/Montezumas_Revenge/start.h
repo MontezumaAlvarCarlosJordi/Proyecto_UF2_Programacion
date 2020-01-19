@@ -4,8 +4,7 @@
 //Espacio de nombres por defecto
 using namespace FASG;
 
-//Tamaño de la ventana de consola
-const int W = 200, H = 50;
-
-void DrawMap();
-
+void InitWorld();
+void InitPlayer();
+void InitEnemy();
+void InitMap();

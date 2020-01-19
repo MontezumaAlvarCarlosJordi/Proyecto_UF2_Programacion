@@ -155,14 +155,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="map.cpp" />
     <ClCompile Include="Montezumas_Revenge.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="start.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="enemy.h" />
     <ClInclude Include="FAriasSimpleGraphics.h" />
+    <ClInclude Include="HUD.h" />
+    <ClInclude Include="map.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="start.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="FAriasSimpleGraphics64.lib" />
     <Library Include="FAriasSimpleGraphicsDBG64.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Enemy.txt" />
+    <Text Include="PlayerIdle.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
