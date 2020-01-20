@@ -6,8 +6,6 @@
 
 Player player1;
 
-
-
 EPlayer statusPlayer1;
 
 void InitPlayer() {
@@ -29,6 +27,7 @@ void InitPlayer() {
 
 void InputPlayer(bool &gameOver) {
 	
+	float initialJumpPosition = 0.f;
 	if (FASG::IsKeyDown('X')) {
 		
 		gameOver = true;
@@ -58,7 +57,16 @@ void InputPlayer(bool &gameOver) {
 		player1.sprite[0].Location.x += player1.speed * FASG::GetDeltaTime();
 		statusPlayer1 = EPlayer::DER;
 	}
-	
+	if (FASG::IsKeyDown(' '))
+	{
+		initialJumpPosition = player1.sprite[0].Location.y;
+		
+		if(player1.sprite[0].Location.y > initialJumpPosition - ALTURA_MAX){
+			player1.sprite[0].Location.y -= player1.speed * FASG::GetDeltaTime();
+		}	
+		
+		statusPlayer1 = EPlayer::SALTO;
+	}
 	
 
 }
