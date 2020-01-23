@@ -9,3 +9,4 @@ const int W = 200, H = 50;
 
 void DrawMap();
 
+void Escalera(int x, int y);
