@@ -22,7 +22,7 @@ void InitEnemy()
 
 	//Posicion inicial al empezar el juego
 	enemy1.sprite.Location.x = INITIAL_POS_ENEMY;
-	enemy1.sprite.Location.y = 44.f;
+	enemy1.sprite.Location.y = 45.f;
 
 	//Le indico al sistema que el sprite del player entra dentro del sistema de detección de colisiones, y
 	//que lo identifique con el tag "Player" (como si le digo "Maria").

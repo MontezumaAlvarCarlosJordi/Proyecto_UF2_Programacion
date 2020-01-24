@@ -1,6 +1,5 @@
-7,5
+7,4
 .FFFFF.
-FF.F.FF
+F..F..F
 FFFFFFF
-FF...FF
-..FFF..
+.F.F.F.
