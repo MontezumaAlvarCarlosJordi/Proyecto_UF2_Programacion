@@ -9,8 +9,8 @@ void InitAssets() {
 	assets.sprite[0].LoadSprite("key.txt");
 
 	//Posicion inicial al empezar el juego
-	assets.sprite[0].Location.x = 25.f;
-	assets.sprite[0].Location.y = 23.f;
+	assets.sprite[0].Location.x = 60.f;
+	assets.sprite[0].Location.y = 45.f;
 
 	Sprite::AddToCollisionSystem(assets.sprite[0], "key");
 

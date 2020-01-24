@@ -98,6 +98,13 @@ void InitMap()
 			map1[i][j] = 'X';
 		}
 	}
+
+	for (int i = 0; i < 7; i++) {
+		map1[76 + i][21] = 'B';
+		map1[125 + i][21] = 'B';
+		map1[88 + i][35] = 'B';
+		map1[151 + i][35] = 'B';
+	}
 	
 	Escalera(91, 22);
 
@@ -136,5 +143,6 @@ void Escalera(int x, int y)
 
 	for (int i = x; i < x + 17; i++)
 		map1[i][y + 10] = 'E';
-
+	
+	
 }

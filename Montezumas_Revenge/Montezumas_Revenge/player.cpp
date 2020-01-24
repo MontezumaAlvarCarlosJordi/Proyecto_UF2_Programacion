@@ -76,7 +76,7 @@ void InputPlayer(bool &gameOver) {
 void DrawPlayer() {
 
 
-	if (map1[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y + 6] == 'X')
+	if (map1[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y + 6] == 'X' || map1[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y + 6] == 'B')
 	{
 		player1.speedY = 0;
 		onAir = false;
