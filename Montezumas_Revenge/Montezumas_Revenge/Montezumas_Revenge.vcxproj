@@ -155,6 +155,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="assets.cpp" />
     <ClCompile Include="enemy.cpp" />
     <ClCompile Include="HUD.cpp" />
     <ClCompile Include="map.cpp" />
@@ -163,6 +164,7 @@
     <ClCompile Include="start.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="assets.h" />
     <ClInclude Include="enemy.h" />
     <ClInclude Include="FAriasSimpleGraphics.h" />
     <ClInclude Include="HUD.h" />
@@ -176,6 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Enemy.txt" />
+    <Text Include="key.txt" />
     <Text Include="PlayerIdle.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

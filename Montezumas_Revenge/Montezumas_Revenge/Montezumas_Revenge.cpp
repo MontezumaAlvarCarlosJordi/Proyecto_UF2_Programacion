@@ -2,6 +2,7 @@
 #include "player.h"
 #include "enemy.h"
 #include "map.h"
+#include "assets.h"
 #include "start.h"
 #include "FAriasSimpleGraphics.h"
 #include <conio.h>
@@ -24,8 +25,9 @@ int main()
 	{
 		InputPlayer(gameOver);
 		DrawMap();
-		DrawPlayer();
+		DrawAssets();
 		MoveEnemy();
+		DrawPlayer();
 		DrawEnemy();
 
 		FASG::RenderFrame();

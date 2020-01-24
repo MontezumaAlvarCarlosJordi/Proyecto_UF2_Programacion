@@ -81,6 +81,7 @@ void DrawPlayer() {
 		player1.speedY = 0;
 		onAir = false;
 	}
+
 	else 
 	{
 		player1.speedY += ACCEL_JUMP * FASG::GetDeltaTime(); 
