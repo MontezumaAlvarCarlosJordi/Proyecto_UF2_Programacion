@@ -23,9 +23,9 @@ int main()
 	while (!gameOver)
 	{
 		InputPlayer(gameOver);
- 		MoveEnemy();
-		DrawMap();
 		DrawPlayer();
+		DrawMap();
+		MoveEnemy();
 		DrawEnemy();
 
 		FASG::RenderFrame();

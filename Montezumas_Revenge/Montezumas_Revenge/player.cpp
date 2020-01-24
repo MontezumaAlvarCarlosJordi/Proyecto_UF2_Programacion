@@ -2,7 +2,7 @@
 #include "map.h"
 #include "start.h"
 
-
+extern char map1[200][51];
 
 Player player1;
 
@@ -18,7 +18,7 @@ void InitPlayer() {
 
 	//Posicion inicial al empezar el juego
 	player1.sprite[0].Location.x = W * 0.5f;
-	player1.sprite[0].Location.y = H * 0.5f;
+	player1.sprite[0].Location.y = H * 0.5f - 10;
 
 	//Le indico al sistema que el sprite del player entra dentro del sistema de detección de colisiones, y
 	//que lo identifique con el tag "Player" (como si le digo "Maria").
@@ -34,46 +34,45 @@ void InputPlayer(bool &gameOver) {
 
 	}
 	
-	statusPlayer1 = EPlayer::IDLE;
+	if (statusPlayer1 != EPlayer::SALTO) {
+		statusPlayer1 = EPlayer::IDLE;
+	}
+
 
 	
-	if (FASG::IsKeyPressed('W'))
+	if (FASG::IsKeyDown('W'))
 	{
-		player1.sprite[0].Location.y -= player1.speed * FASG::GetDeltaTime();
-		statusPlayer1 = EPlayer::ARRIBA;
+		
 	}
 	if (FASG::IsKeyPressed('S'))
 	{
-		player1.sprite[0].Location.y += player1.speed * FASG::GetDeltaTime();
-		statusPlayer1 = EPlayer::ABAJO;
+		
 	}
 	if (FASG::IsKeyPressed('A'))
 	{
 		player1.sprite[0].Location.x -= player1.speed * FASG::GetDeltaTime();
-		statusPlayer1 = EPlayer::IZQ;
 	}
 	if (FASG::IsKeyPressed('D'))
 	{
 		player1.sprite[0].Location.x += player1.speed * FASG::GetDeltaTime();
-		statusPlayer1 = EPlayer::DER;
 	}
 	if (FASG::IsKeyDown(' '))
 	{
-		initialJumpPosition = player1.sprite[0].Location.y;
-		
-		if(player1.sprite[0].Location.y > initialJumpPosition - ALTURA_MAX){
-			player1.sprite[0].Location.y -= player1.speed * FASG::GetDeltaTime();
-		}	
-		
-		statusPlayer1 = EPlayer::SALTO;
+		player1.sprite[0].Location.y--;
+		player1.speedY = JUMP_Y_IMPULSE;
 	}
+
 	
 
 }
 
 void DrawPlayer() {
 
-	
+	if (map1[(int)(player1.sprite[0].Location.x)][(int)(player1.sprite[0].Location.y + 7)] == ' ')
+		player1.speedY = 0;
+	else
+		player1.speedY += ACCEL_JUMP * FASG::GetDeltaTime();
+
 	switch (statusPlayer1) {
 	case ARRIBA:
 		FASG::WriteSpriteBuffer(player1.sprite[0].Location.x, player1.sprite[0].Location.y, player1.sprite[0]);

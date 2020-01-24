@@ -9,10 +9,12 @@ void DrawMap() {
 		{
 			if (map1[i][j] == 'X')
 				FASG::WritePixelBuffer(i, j, FASG::EBackColor::LightGreen);
-			if (map1[i][j] == 'P')
+			else if (map1[i][j] == 'P')
 				FASG::WritePixelBuffer(i, j, FASG::EBackColor::LightYellow);
-			if(map1[i][j] == 'E')
+			else if (map1[i][j] == 'E')
 				FASG::WritePixelBuffer(i, j, FASG::EBackColor::LightBlue);
+			else
+				map1[i][j] == ' ';
 		}
 	}
 	
