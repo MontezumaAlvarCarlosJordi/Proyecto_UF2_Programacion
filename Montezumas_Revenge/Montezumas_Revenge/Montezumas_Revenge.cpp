@@ -19,7 +19,7 @@ int main()
 
 	InitWorld();
 
-
+	
 	while (!gameOver)
 	{
 		InputPlayer(gameOver);
@@ -30,14 +30,8 @@ int main()
 
 		FASG::RenderFrame();
 	}
-
-	//Elimina las entradas del player en el buffer del teclado
-	//(todos los 'A' y 'D' del movimiento...
-	while (_kbhit())
+	while (_kbhit>0)
 		_getch();
-
-	//Espera cualquier tecla
-	while (!_kbhit());
 
 	FASG::DestroyConsole();
 }

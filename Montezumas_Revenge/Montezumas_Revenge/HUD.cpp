@@ -4,10 +4,13 @@
 #include "player.h"
 
 std::string HUDMessage;
+extern Player player1;
+
 
 void miColision(std::string tag1, std::string tag2)
 {
-	HUDMessage = "Colision de " + tag1 + " y " + tag2;
+	player1.sprite[0].Location.x = W * 0.5f;
+	player1.sprite[0].Location.y = H * 0.5f - 10;
 }
 
 void DrawHUD()

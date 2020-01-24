@@ -176,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Enemy.txt" />
+    <Text Include="escaleras.txt" />
     <Text Include="PlayerIdle.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

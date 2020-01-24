@@ -93,10 +93,7 @@ void InitMap()
 
 	for (int i = 95; i < 13+95; i++)
 	{
-		for (int j = 35; j < (35 + 3); j++)
-		{
-			map1[i][j] = 'X';
-		}
+			map1[i][35] = 'X';
 	}
 	
 	Escalera(91, 22);
