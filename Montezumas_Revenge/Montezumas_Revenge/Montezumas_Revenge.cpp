@@ -23,8 +23,8 @@ int main()
 	while (!gameOver)
 	{
 		InputPlayer(gameOver);
-		DrawPlayer();
 		DrawMap();
+		DrawPlayer();
 		MoveEnemy();
 		DrawEnemy();
 

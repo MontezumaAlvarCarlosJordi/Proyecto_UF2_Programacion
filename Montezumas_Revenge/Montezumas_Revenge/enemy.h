@@ -3,7 +3,8 @@
 
 //Espacio de nombres por defecto
 using namespace FASG;
-const int MAX_DISTANCE = 30;
+const int MAX_DISTANCE = 80;
+const float INITIAL_POS_ENEMY = 55.f;
 
 //Variables del enemigo
 struct Enemy {

@@ -34,12 +34,6 @@ void InputPlayer(bool &gameOver) {
 
 	}
 	
-	if (statusPlayer1 != EPlayer::SALTO) {
-		statusPlayer1 = EPlayer::IDLE;
-	}
-
-
-	
 	if (FASG::IsKeyDown('W'))
 	{
 		
@@ -68,11 +62,16 @@ void InputPlayer(bool &gameOver) {
 
 void DrawPlayer() {
 
-	if (map1[(int)(player1.sprite[0].Location.x)][(int)(player1.sprite[0].Location.y + 7)] == ' ')
-		player1.speedY = 0;
-	else
-		player1.speedY += ACCEL_JUMP * FASG::GetDeltaTime();
 
+	if (map1[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y + 6] == 'X')
+	{
+		player1.speedY = 0;
+	}
+	else 
+	{
+		player1.speedY += ACCEL_JUMP * FASG::GetDeltaTime(); 
+		player1.sprite[0].Location.y += player1.speedY * FASG::GetDeltaTime();
+	}
 	switch (statusPlayer1) {
 	case ARRIBA:
 		FASG::WriteSpriteBuffer(player1.sprite[0].Location.x, player1.sprite[0].Location.y, player1.sprite[0]);

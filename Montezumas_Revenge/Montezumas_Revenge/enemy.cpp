@@ -1,13 +1,16 @@
 #include "enemy.h"
 #include "map.h"
 
+
+extern char map1[200][51];
+
 Enemy enemy1;
 
 EEnemy statusEnemy1;
 
 bool goRight = true;
 
-const float INITIAL_POS_ENEMY = W * 0.2f;
+
 
 void InitEnemy()
 {
@@ -19,7 +22,7 @@ void InitEnemy()
 
 	//Posicion inicial al empezar el juego
 	enemy1.sprite.Location.x = INITIAL_POS_ENEMY;
-	enemy1.sprite.Location.y = H * 0.5f;
+	enemy1.sprite.Location.y = 44.f;
 
 	//Le indico al sistema que el sprite del player entra dentro del sistema de detección de colisiones, y
 	//que lo identifique con el tag "Player" (como si le digo "Maria").
