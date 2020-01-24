@@ -1,6 +1,6 @@
 #include "map.h"
 
-char map1[201][50];
+char map1[200][51];
 
 void DrawMap() {
 	for (int i = 0; i < W; i++)
@@ -28,7 +28,7 @@ void InitMap()
 
 	for (int i = 0; i < 200; i++)
 	{
-		map1[i][199] = 'X';
+		map1[i][49] = 'X';
 	}
 
 	for (int i = 0; i < 68; i++)

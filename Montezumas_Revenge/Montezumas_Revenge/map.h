@@ -5,7 +5,7 @@
 using namespace FASG;
 
 //Tamaño de la ventana de consola
-const int W = 200, H = 50;
+const int W = 200, H = 51;
 
 void DrawMap();
 
