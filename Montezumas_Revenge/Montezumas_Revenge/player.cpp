@@ -44,15 +44,7 @@ void InputPlayer(bool &gameOver) {
 	{
 		
 	}
-	if (FASG::IsKeyPressed('A'))
-	{
-		player1.sprite[0].Location.x -= player1.speed * FASG::GetDeltaTime();
-	}
-	if (FASG::IsKeyPressed('D'))
-	{
-		player1.sprite[0].Location.x += player1.speed * FASG::GetDeltaTime();
-	}
-
+	
 	if (FASG::IsKeyDown(' ') && onAir == false)
 	{
 		player1.sprite[0].Location.y--;
