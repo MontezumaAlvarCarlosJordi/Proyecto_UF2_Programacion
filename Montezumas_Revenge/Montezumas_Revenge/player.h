@@ -20,9 +20,9 @@ enum EPlayer
 };
 
 //Aceleración de la gravedad
-const float ACCEL_JUMP = 70.f;
+const float ACCEL_JUMP = 80.f;
 
-const float JUMP_Y_IMPULSE = -20.f;
+const float JUMP_Y_IMPULSE = -30.f;
 
 const float ALTURA_MAX = 15.f;
 
