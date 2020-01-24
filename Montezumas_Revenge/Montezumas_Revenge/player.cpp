@@ -8,6 +8,8 @@ Player player1;
 
 EPlayer statusPlayer1;
 
+bool onAir = false;
+
 void InitPlayer() {
 	
 	//Velocidad del jugador
@@ -50,10 +52,12 @@ void InputPlayer(bool &gameOver) {
 	{
 		player1.sprite[0].Location.x += player1.speed * FASG::GetDeltaTime();
 	}
-	if (FASG::IsKeyDown(' '))
+
+	if (FASG::IsKeyDown(' ') && onAir == false)
 	{
 		player1.sprite[0].Location.y--;
 		player1.speedY = JUMP_Y_IMPULSE;
+		onAir = true;
 	}
 
 	
@@ -66,11 +70,13 @@ void DrawPlayer() {
 	if (map1[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y + 6] == 'X')
 	{
 		player1.speedY = 0;
+		onAir = false;
 	}
 	else 
 	{
 		player1.speedY += ACCEL_JUMP * FASG::GetDeltaTime(); 
 		player1.sprite[0].Location.y += player1.speedY * FASG::GetDeltaTime();
+		onAir = true;
 	}
 	switch (statusPlayer1) {
 	case ARRIBA:
