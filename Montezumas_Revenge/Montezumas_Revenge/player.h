@@ -7,7 +7,7 @@ using namespace FASG;
 //Variables del jugador
 struct Player {
 
-	Sprite sprite[6] = { Sprite("PlayerIdle.txt") };
+	Sprite sprite[6] = { Sprite("PlayerIdle.txt"), Sprite("PlayerIdle2.txt") };
 	float speed;
 	float speedY = 0.f;
 

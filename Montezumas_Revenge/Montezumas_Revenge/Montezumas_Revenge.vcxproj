@@ -181,6 +181,7 @@
     <Text Include="escaleras.txt" />
     <Text Include="key.txt" />
     <Text Include="PlayerIdle.txt" />
+    <Text Include="PlayerIdle2.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

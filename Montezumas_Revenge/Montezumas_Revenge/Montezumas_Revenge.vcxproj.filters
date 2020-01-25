@@ -81,5 +81,8 @@
     <Text Include="escaleras.txt">
       <Filter>Archivos de recursos</Filter>
     </Text>
+    <Text Include="PlayerIdle2.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
   </ItemGroup>
 </Project>

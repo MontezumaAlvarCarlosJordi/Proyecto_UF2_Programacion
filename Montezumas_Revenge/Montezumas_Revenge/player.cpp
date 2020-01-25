@@ -10,6 +10,8 @@ EPlayer statusPlayer1;
 
 bool onAir = false;
 
+bool upDown = false;
+
 void InitPlayer() {
 	
 	//Velocidad del jugador
@@ -36,17 +38,20 @@ void InputPlayer(bool &gameOver) {
 
 	}
 	
-	if (FASG::IsKeyDown('W'))
-	{
-		
+	if(upDown == true){
+		player1.speedY = 0;
+		if (FASG::IsKeyPressed('W'))
+		{
+			player1.sprite[0].Location.y -= player1.speed * FASG::GetDeltaTime();
+		}
+		if (FASG::IsKeyPressed('S'))
+		{
+			player1.sprite[0].Location.y += player1.speed * FASG::GetDeltaTime();
+		}
 	}
-	if (FASG::IsKeyPressed('S'))
-	{
-		
-	}
-
 	if (FASG::IsKeyPressed('A'))
 	{
+		statusPlayer1 = EPlayer::IZQ;
 		if (map1[(int)player1.sprite[0].Location.x - 1][(int)player1.sprite[0].Location.y] == 'X')
 			player1.sprite[0].Location.x -= 0;
 
@@ -55,6 +60,7 @@ void InputPlayer(bool &gameOver) {
 	}
 	if (FASG::IsKeyPressed('D'))
 	{
+		statusPlayer1 = EPlayer::DER;
 		if (map1[(int)player1.sprite[0].Location.x + 7][(int)player1.sprite[0].Location.y] == 'X')
 			player1.sprite[0].Location.x += 0;
 
@@ -87,6 +93,7 @@ void DrawPlayer() {
 		player1.speedY += ACCEL_JUMP * FASG::GetDeltaTime(); 
 		player1.sprite[0].Location.y += player1.speedY * FASG::GetDeltaTime();
 		onAir = true;
+		upDown = false;
 	}
 	switch (statusPlayer1) {
 	case ARRIBA:
@@ -102,7 +109,7 @@ void DrawPlayer() {
 		break;
 
 	case IZQ:
-		FASG::WriteSpriteBuffer(player1.sprite[0].Location.x, player1.sprite[0].Location.y, player1.sprite[0]);
+		FASG::WriteSpriteBuffer(player1.sprite[0].Location.x, player1.sprite[0].Location.y, player1.sprite[1]);
 		break;
 
 	case IDLE:

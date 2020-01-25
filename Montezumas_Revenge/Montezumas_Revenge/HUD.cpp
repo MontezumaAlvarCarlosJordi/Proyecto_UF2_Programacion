@@ -7,6 +7,8 @@
 std::string HUDMessage;
 extern Player player1;
 extern Assets assets;
+extern bool upDown;
+
 
 void miColision(std::string tag1, std::string tag2)
 {
@@ -14,6 +16,11 @@ void miColision(std::string tag1, std::string tag2)
 		player1.sprite[0].Location.x = W * 0.5f;
 		player1.sprite[0].Location.y = H * 0.5f - 10;
 	}
+
+	if ((tag1 == "Player" && tag2 == "escalera") || (tag1 == "escalera" && tag2 == "Player")) {
+		upDown = true;
+	}
+	
 
 	if ((tag1 == "Player" && tag2 == "key") || (tag1 == "key" && tag2 == "Player")) {
 		assets.sprite[0].Location.x = 5;
