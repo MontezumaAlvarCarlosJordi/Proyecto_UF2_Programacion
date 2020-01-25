@@ -1,0 +1,15 @@
+21,14
+.....................
+CCCC.............CCCC
+CCCCCCCCCCCCCCCCCCCCC
+CCCC.............CCCC
+CCCC.............CCCC
+CCCCCCCCCCCCCCCCCCCCC
+CCCC.............CCCC
+CCCC.............CCCC
+CCCCCCCCCCCCCCCCCCCCC
+CCCC.............CCCC
+CCCC.............CCCC
+CCCCCCCCCCCCCCCCCCCCC
+CCCC.............CCCC
+CCCC.............CCCC
