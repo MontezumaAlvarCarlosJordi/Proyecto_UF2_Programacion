@@ -78,5 +78,8 @@
     <Text Include="key.txt">
       <Filter>Archivos de recursos</Filter>
     </Text>
+    <Text Include="escaleras.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
   </ItemGroup>
 </Project>

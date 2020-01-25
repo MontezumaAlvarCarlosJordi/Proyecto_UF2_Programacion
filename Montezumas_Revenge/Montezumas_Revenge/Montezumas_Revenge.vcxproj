@@ -178,6 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Enemy.txt" />
+    <Text Include="escaleras.txt" />
     <Text Include="key.txt" />
     <Text Include="PlayerIdle.txt" />
   </ItemGroup>
