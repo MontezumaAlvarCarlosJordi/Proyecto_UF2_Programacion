@@ -1,5 +1,0 @@
-7,4
-.FFFFF.
-F..F..F
-FFFFFFF
-.F.F.F.
