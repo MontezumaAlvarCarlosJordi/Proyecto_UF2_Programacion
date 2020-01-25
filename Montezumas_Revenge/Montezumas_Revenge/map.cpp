@@ -38,30 +38,30 @@ void InitMap()
 		map1[i][21] = 'X';
 	}
 
-	for (int i = 83; i < 83+35; i++)
+	for (int i = 83; i < 83 + 35; i++)
 	{
 		map1[i][21] = 'X';
 	}
 
-	for (int i = 132; i < 132+68; i++)
+	for (int i = 132; i < 132 + 68; i++)
 	{
 		map1[i][21] = 'X';
 	}
 
-	for (int i = 16; i < 26+16; i++)
+	for (int i = 16; i < 26 + 16; i++)
 	{
 		map1[i][35] = 'X';
 	}
 
-	for (int i = 200-42; i < 200-15; i++)
+	for (int i = 200 - 42; i < 200 - 15; i++)
 	{
 		map1[i][35] = 'X';
 	}
 
 
-	for (int i = 22; i < (5+22); i++)
+	for (int i = 22; i < (5 + 22); i++)
 	{
-		for (int j = 8; j < (13+8); j++)
+		for (int j = 8; j < (13 + 8); j++)
 		{
 			map1[i][j] = 'P';
 		}
@@ -83,7 +83,7 @@ void InitMap()
 		}
 	}
 
-	for (int i = 200; i > (200-16); i--)
+	for (int i = 200; i > (200 - 16); i--)
 	{
 		for (int j = 22; j < (27 + 22); j++)
 		{
@@ -91,12 +91,9 @@ void InitMap()
 		}
 	}
 
-	for (int i = 95; i < 13+95; i++)
+	for (int i = 95; i < 13 + 95; i++)
 	{
-		for (int j = 35; j < (35 + 3); j++)
-		{
-			map1[i][j] = 'X';
-		}
+		map1[i][35] = 'X';
 	}
 
 	for (int i = 0; i < 7; i++) {
