@@ -34,7 +34,7 @@ void InitAssets() {
 	assets.sprite[1].Location.y = 11.f;
 	assets.sprite[2].Location.x = 170.f;
 	assets.sprite[2].Location.y = 25.f;
-
+	
 	escaleras[0].Location.x = 16.f;
 	escaleras[0].Location.y = 35.f;
 	escaleras[1].Location.x = 164.f;

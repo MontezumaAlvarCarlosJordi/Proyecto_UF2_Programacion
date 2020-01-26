@@ -19,9 +19,16 @@ void miColision(std::string tag1, std::string tag2)
 		player1.sprite[0].Location.x = W * 0.5f;
 		player1.sprite[0].Location.y = H * 0.5f - 10;
 		
+		player1.lifes--;
+
 		InitAssets();
 		for (int i = 0; i < 3; i++) {
 			puertaAbierta[i] = false;
+		}
+
+		if (player1.lifes == 0)
+		{
+			gameOver = true;
 		}
 	}
 

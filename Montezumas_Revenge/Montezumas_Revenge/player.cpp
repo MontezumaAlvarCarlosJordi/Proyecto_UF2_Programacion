@@ -29,6 +29,8 @@ void InitPlayer() {
 	//Le indico al sistema que el sprite del player entra dentro del sistema de detección de colisiones, y
 	//que lo identifique con el tag "Player" (como si le digo "Maria").
 	Sprite::AddToCollisionSystem(player1.sprite[0], "Player");
+
+	
 }
 
 void InputPlayer(bool &gameOver) {
@@ -126,5 +128,10 @@ void DrawPlayer() {
 	case SALTO:
 		FASG::WriteSpriteBuffer(player1.sprite[0].Location.x, player1.sprite[0].Location.y, player1.sprite[0]);
 		break;
+	}
+
+	for (int i = 0; i < player1.lifes; i++)
+	{
+		FASG::WriteSpriteBuffer((82 + (i * 23)), 1, player1.sprite[2]);
 	}
 }

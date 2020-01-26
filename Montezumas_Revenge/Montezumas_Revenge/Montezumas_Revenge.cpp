@@ -33,6 +33,7 @@ int main()
 		FASG::RenderFrame();
 	}
 
+
 	//Elimina las entradas del player en el buffer del teclado
 	//(todos los 'A' y 'D' del movimiento...
 	while (_kbhit())
