@@ -9,4 +9,6 @@ const int W = 200, H = 51;
 
 void DrawMap();
 
+void FirstRoom();
+
 void Escalera(int x, int y);

@@ -177,11 +177,18 @@
     <Library Include="FAriasSimpleGraphicsDBG64.lib" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="blueKey.txt" />
     <Text Include="Enemy.txt" />
+    <Text Include="escalera2.txt" />
     <Text Include="escaleras.txt" />
     <Text Include="key.txt" />
     <Text Include="PlayerIdle.txt" />
     <Text Include="PlayerIdle2.txt" />
+    <Text Include="portal.txt" />
+    <Text Include="puerta.txt" />
+    <Text Include="puertaAzul.txt" />
+    <Text Include="puertaRoja.txt" />
+    <Text Include="redKey.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

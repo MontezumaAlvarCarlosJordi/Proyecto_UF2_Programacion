@@ -84,5 +84,26 @@
     <Text Include="PlayerIdle2.txt">
       <Filter>Archivos de recursos</Filter>
     </Text>
+    <Text Include="blueKey.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
+    <Text Include="escalera2.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
+    <Text Include="portal.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
+    <Text Include="puerta.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
+    <Text Include="puertaAzul.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
+    <Text Include="puertaRoja.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
+    <Text Include="redKey.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
   </ItemGroup>
 </Project>

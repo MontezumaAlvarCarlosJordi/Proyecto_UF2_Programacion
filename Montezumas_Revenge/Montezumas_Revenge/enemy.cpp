@@ -15,7 +15,7 @@ bool goRight = true;
 void InitEnemy()
 {
 	//Velocidad del jugador
-	enemy1.speed = 25.f;
+	enemy1.speed = 45.f;
 
 	//Se asocia que Sprite va a ser el jugador
 	enemy1.sprite.LoadSprite("Enemy.txt");
@@ -34,10 +34,6 @@ void InitEnemy()
 
 void MoveEnemy() {
 	
-	
-
-	
-
 	if(enemy1.sprite.Location.x <= INITIAL_POS_ENEMY){
 		
 		statusEnemy1 = EEnemy::MOVING_RIGHT;
