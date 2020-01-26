@@ -1,5 +1,6 @@
 #include "enemy.h"
 #include "map.h"
+#include "start.h"
 
 
 extern char map1[200][51];

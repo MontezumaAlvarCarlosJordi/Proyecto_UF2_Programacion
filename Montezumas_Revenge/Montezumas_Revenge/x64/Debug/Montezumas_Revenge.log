@@ -1,31 +1,11 @@
-﻿  assets.cpp
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\assets.cpp(33,80): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\assets.cpp(33,51): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\assets.cpp(34,72): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\assets.cpp(34,47): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(459,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (+.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   enemy.cpp
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\enemy.cpp(67,74): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\enemy.cpp(67,48): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-  HUD.cpp
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\HUD.cpp(32,25): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\HUD.cpp(42,28): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-  map.cpp
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\map.cpp(17,16): warning C4553: "==": el resultado de la expresión no se usa. ¿Quiso decir "="?
-  Montezumas_Revenge.cpp
-  player.cpp
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\player.cpp(100,83): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\player.cpp(100,53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\player.cpp(104,83): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\player.cpp(104,53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\player.cpp(108,83): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\player.cpp(108,53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\player.cpp(112,83): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\player.cpp(112,53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\player.cpp(116,83): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\player.cpp(116,53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\player.cpp(120,83): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\player.cpp(120,53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-  start.cpp
-  Generando código...
-FAriasSimpleGraphicsDBG64.lib(FAriasSimpleGraphics.obj) : warning LNK4099: no se encontró PDB 'FAriasSimpleGraphics.pdb' con 'FAriasSimpleGraphicsDBG64.lib(FAriasSimpleGraphics.obj)' o en 'C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\x64\Debug\FAriasSimpleGraphics.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-  Montezumas_Revenge.vcxproj -> C:\Users\FX504\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\x64\Debug\Montezumas_Revenge.exe
+C:\Users\Alvar Dalda\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\enemy.cpp(64,74): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Alvar Dalda\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\Montezumas_Revenge\enemy.cpp(64,48): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+start.obj : error LNK2019: símbolo externo "void __cdecl InitPlayer(void)" (?InitPlayer@@YAXXZ) sin resolver al que se hace referencia en la función "void __cdecl InitWorld(void)" (?InitWorld@@YAXXZ)
+start.obj : error LNK2019: símbolo externo "void __cdecl InitMap(void)" (?InitMap@@YAXXZ) sin resolver al que se hace referencia en la función "void __cdecl InitWorld(void)" (?InitWorld@@YAXXZ)
+start.obj : error LNK2019: símbolo externo "void __cdecl InitAssets(void)" (?InitAssets@@YAXXZ) sin resolver al que se hace referencia en la función "void __cdecl InitWorld(void)" (?InitWorld@@YAXXZ)
+start.obj : error LNK2019: símbolo externo "void __cdecl miColision(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?miColision@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z) sin resolver al que se hace referencia en la función "void __cdecl InitWorld(void)" (?InitWorld@@YAXXZ)
+FAriasSimpleGraphicsDBG64.lib(FAriasSimpleGraphics.obj) : error LNK2001: símbolo externo "void * hndl" (?hndl@@3PEAXEA) sin resolver
+MSVCRTD.lib(exe_main.obj) : error LNK2019: símbolo externo main sin resolver al que se hace referencia en la función "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Users\Alvar Dalda\Documents\GitHub\Proyecto_UF2_Programacion\Montezumas_Revenge\x64\Debug\Montezumas_Revenge.exe : fatal error LNK1120: 6 externos sin resolver
