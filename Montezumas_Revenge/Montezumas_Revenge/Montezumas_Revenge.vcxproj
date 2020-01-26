@@ -159,6 +159,7 @@
     <ClCompile Include="enemy.cpp" />
     <ClCompile Include="HUD.cpp" />
     <ClCompile Include="map.cpp" />
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="Montezumas_Revenge.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="start.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="FAriasSimpleGraphics.h" />
     <ClInclude Include="HUD.h" />
     <ClInclude Include="map.h" />
+    <ClInclude Include="menu.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="start.h" />
   </ItemGroup>
@@ -190,6 +192,7 @@
     <Text Include="puertaRoja.txt" />
     <Text Include="redKey.txt" />
     <Text Include="sombrero.txt" />
+    <Text Include="textoMenu.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

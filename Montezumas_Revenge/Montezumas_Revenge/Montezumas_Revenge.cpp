@@ -7,10 +7,12 @@
 #include "start.h"
 #include "FAriasSimpleGraphics.h"
 #include <conio.h>
+#include "menu.h"
 
 
 HANDLE hndl;
 bool gameOver = false;
+bool gameStart = false;
 extern std::string HUDMessage;
 
 int main()
@@ -19,8 +21,14 @@ int main()
 	FASG::InitConsole(W, H);
 	FASG::ShowConsoleCursor(false);
 
-	InitWorld();
+	while (!gameStart)
+	{
+		DrawTitulo();
+		Start();
+		FASG::RenderFrame();
+	}
 
+	InitWorld();
 
 	while (!gameOver)
 	{
