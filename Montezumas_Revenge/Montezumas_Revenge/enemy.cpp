@@ -1,6 +1,5 @@
 #include "enemy.h"
 #include "map.h"
-#include "start.h"
 
 
 extern char map1[200][51];
@@ -35,6 +34,10 @@ void InitEnemy()
 
 void MoveEnemy() {
 	
+	
+
+	
+
 	if(enemy1.sprite.Location.x <= INITIAL_POS_ENEMY){
 		
 		statusEnemy1 = EEnemy::MOVING_RIGHT;

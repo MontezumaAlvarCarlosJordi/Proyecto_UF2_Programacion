@@ -11,4 +11,6 @@ void DrawMap();
 
 void FirstRoom();
 
+void SecondRoom();
+
 void Escalera(int x, int y);
