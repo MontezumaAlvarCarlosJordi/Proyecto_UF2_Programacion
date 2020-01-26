@@ -189,6 +189,7 @@
     <Text Include="puertaAzul.txt" />
     <Text Include="puertaRoja.txt" />
     <Text Include="redKey.txt" />
+    <Text Include="sombrero.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

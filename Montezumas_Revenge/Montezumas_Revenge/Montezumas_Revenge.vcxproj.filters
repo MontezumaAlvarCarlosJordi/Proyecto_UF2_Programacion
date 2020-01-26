@@ -105,5 +105,8 @@
     <Text Include="redKey.txt">
       <Filter>Archivos de recursos</Filter>
     </Text>
+    <Text Include="sombrero.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
   </ItemGroup>
 </Project>
