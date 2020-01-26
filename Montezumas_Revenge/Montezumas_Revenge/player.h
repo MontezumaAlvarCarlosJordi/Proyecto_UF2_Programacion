@@ -10,7 +10,6 @@ struct Player {
 	Sprite sprite[6] = { Sprite("PlayerIdle.txt"), Sprite("PlayerIdle2.txt"), Sprite("sombrero.txt") };
 	float speed;
 	float speedY = 0.f;
-	const int MAX_LIFES = 5;
 	int lifes = 5;
 };
 

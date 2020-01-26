@@ -12,8 +12,9 @@
 
 HANDLE hndl;
 bool gameOver = false;
-bool gameStart = false;
 extern std::string HUDMessage;
+
+bool gameStart = false;
 
 int main()
 {
@@ -21,13 +22,8 @@ int main()
 	FASG::InitConsole(W, H);
 	FASG::ShowConsoleCursor(false);
 
-	while (!gameStart)
-	{
-		DrawTitulo();
-		Start();
-		FASG::RenderFrame();
-	}
-
+	
+	
 	InitWorld();
 
 	while (!gameOver)

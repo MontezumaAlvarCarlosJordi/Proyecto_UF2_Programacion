@@ -1,1 +1,0 @@
-#include "menu.h"FASG::Sprite Titulo = FASG::Sprite("textoMenu.txt");extern bool gameStart;void DrawTitulo() {	FASG::WriteSpriteBuffer(57, 10, Titulo);}void Start(){	std::string start = "PRESS SPACE TO START";	FASG::WriteStringBuffer(40, FASG::EAligned::CENTER, start, FASG::EForeColor::Red);	if (FASG::IsKeyDown(' '))	{		gameStart = true;	}}

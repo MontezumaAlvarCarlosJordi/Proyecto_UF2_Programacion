@@ -36,9 +36,6 @@
     <ClCompile Include="assets.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="menu.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FAriasSimpleGraphics.h">
@@ -60,9 +57,6 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="assets.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="menu.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -114,7 +108,7 @@
     <Text Include="sombrero.txt">
       <Filter>Archivos de recursos</Filter>
     </Text>
-    <Text Include="textoMenu.txt">
+    <Text Include="titulo.txt">
       <Filter>Archivos de recursos</Filter>
     </Text>
   </ItemGroup>
