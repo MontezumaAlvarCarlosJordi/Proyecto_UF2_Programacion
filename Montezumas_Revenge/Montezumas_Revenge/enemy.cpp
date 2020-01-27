@@ -4,40 +4,34 @@
 
 extern char map1[200][51];
 
-Enemy enemy1;
+Enemy enemy1; //con el struct de Enemy creamos una valiable para acceder a las diferentes variables del enemigo
 
 EEnemy statusEnemy1;
 
-bool goRight = true;
 
 
 
 void InitEnemy()
 {
-	//Velocidad del jugador
+	//velocidad del jugador
 	enemy1.speed = 45.f;
 
-	//Se asocia que Sprite va a ser el jugador
+	//se asocia que sprite va a ser el enemigo
 	enemy1.sprite.LoadSprite("Enemy.txt");
 
-	//Posicion inicial al empezar el juego
+	//posicion inicial al empezar el juego
 	enemy1.sprite.Location.x = INITIAL_POS_ENEMY;
 	enemy1.sprite.Location.y = 45.f;
 
-	//Le indico al sistema que el sprite del player entra dentro del sistema de detección de colisiones, y
-	//que lo identifique con el tag "Player" (como si le digo "Maria").
+	// y añadimos el sprite al sistema de colisiones
 	Sprite::AddToCollisionSystem(enemy1.sprite, "Enemy");
 
 }
 
 
 
-void MoveEnemy() {
+void MoveEnemy() { //creamos la funcion para crear el movimiento del enemigo
 	
-	
-
-	
-
 	if(enemy1.sprite.Location.x <= INITIAL_POS_ENEMY){
 		
 		statusEnemy1 = EEnemy::MOVING_RIGHT;
@@ -62,7 +56,7 @@ void MoveEnemy() {
 
 }
 
-void DrawEnemy() {
+void DrawEnemy() { //y la funcion para dibujarlo
 
 	FASG::WriteSpriteBuffer(enemy1.sprite.Location.x, enemy1.sprite.Location.y, enemy1.sprite);
 

@@ -2,20 +2,24 @@
 #include "start.h"
 #include "map.h"
 
+//con el struct de Assets creamos una valiable para acceder al struct
 Assets assets;
+//declaramos los sprites que el jugador no almacena en su inventario
 Sprite escaleras[3] = { Sprite("escaleras.txt"), Sprite("escaleras.txt"), Sprite("escalera2.txt") };
 Sprite puertas[4] = { Sprite("puerta.txt"),  Sprite("portal.txt"), Sprite("puertaAzul.txt"), Sprite("puertaRoja.txt") };
 
-void InitAssets() {
+void InitAssets() { //inicializamos los assets
 
 	for (int i = 0; i < 5; i++) {
-		assets.inventory[i] = 'V';
+		assets.inventory[i] = 'V';// iniciamos el inventario con V de vacio
 	}
 
+	//cargamos todos los sprites para las interacciones con el jugador
 	assets.sprite[0].LoadSprite("key.txt");
 	assets.sprite[1].LoadSprite("blueKey.txt");
 	assets.sprite[2].LoadSprite("redKey.txt");
 	
+
 	for (int i = 0; i < 2; i++) {
 		escaleras[i].LoadSprite("escaleras.txt");
 	}
@@ -27,14 +31,14 @@ void InitAssets() {
 	puertas[2].LoadSprite("puertaAzul.txt");
 	puertas[3].LoadSprite("puertaRoja.txt");
 
-	//Posicion inicial al empezar el juego
+	//posicion inicial de cada sprite al empezar el juego 
 	assets.sprite[0].Location.x = 25.f;
 	assets.sprite[0].Location.y = 25.f;
 	assets.sprite[1].Location.x = 185.f;
 	assets.sprite[1].Location.y = 11.f;
 	assets.sprite[2].Location.x = 170.f;
 	assets.sprite[2].Location.y = 25.f;
-	
+
 	escaleras[0].Location.x = 16.f;
 	escaleras[0].Location.y = 35.f;
 	escaleras[1].Location.x = 164.f;
@@ -54,6 +58,7 @@ void InitAssets() {
 	puertas[3].Location.x = 22.f;
 	puertas[3].Location.y = 8.f;
 
+	// y añadimos todos los sprites al sistema de colisiones
 	Sprite::AddToCollisionSystem(assets.sprite[0], "key");
 	Sprite::AddToCollisionSystem(assets.sprite[1], "blueKey");
 	Sprite::AddToCollisionSystem(assets.sprite[2], "redKey");
@@ -67,7 +72,7 @@ void InitAssets() {
 
 }
 
-void DrawAssets() {
+void DrawAssets() { //dibuja todos los sprites
 	
 	for (int i = 0; i < 3; i++) {
 		FASG::WriteSpriteBuffer(assets.sprite[i].Location.x, assets.sprite[i].Location.y, assets.sprite[i]);

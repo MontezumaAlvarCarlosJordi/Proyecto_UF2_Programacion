@@ -1,10 +1,12 @@
-#include "HUD.h"
+#include "HUD_colisiones.h"
 #include "map.h"
 #include "start.h"
 #include "assets.h"
 #include "enemy.h"
 #include "player.h"
 
+
+//variables necesarias para las condiciones de colision entre los diferentes sprites
 std::string HUDMessage;
 extern Player player1;
 extern Assets assets;
@@ -14,24 +16,24 @@ bool puertaAbierta[3] = {false, false, false};
 extern bool gameOver;
 
 void miColision(std::string tag1, std::string tag2)
-{
+{	//colisiones entre enemigo y player para la reducion de vida
 	if ((tag1 == "Player" && tag2 == "Enemy") || (tag1 == "Enemy" && tag2 == "Player")) {
 		player1.sprite[0].Location.x = W * 0.5f;
 		player1.sprite[0].Location.y = H * 0.5f - 10;
-		
 		player1.lifes--;
 
 		InitAssets();
-		for (int i = 0; i < 3; i++) {
-			puertaAbierta[i] = false;
-		}
 
-		if (player1.lifes == 0)
+		if (player1.lifes == 0) 
 		{
 			gameOver = true;
 		}
-	}
 
+		for (int i = 0; i < 3; i++) {
+			puertaAbierta[i] = false;
+		}
+	}
+	//colisiones entre puerta y player para abrirlas cuando haya posesion de llave
 	if ((tag1 == "Player" && tag2 == "puerta") || (tag1 == "puerta" && tag2 == "Player")) {
 		for (int i = 0; i < 5; i++) {
 			if (assets.inventory[i] == 'L') {
@@ -71,18 +73,17 @@ void miColision(std::string tag1, std::string tag2)
 				puertas[3].Location.y = 1;
 				assets.sprite[2].Location.x = 210;
 				assets.sprite[2].Location.y = 1;
-				DrawHUD();
-
 			}
 		}
 
 	}
-
+	//colision entre el portal que te lleva a la pantalla final
 	if ((tag1 == "Player" && tag2 == "portal") || (tag1 == "portal" && tag2 == "Player")) {
 		
 		gameOver = true;
 	}
 
+	//colisiones para la interaccion entre el player y las escaleras
 	if ((tag1 == "Player" && tag2 == "escalera") || (tag1 == "escalera" && tag2 == "Player")) {
 		upDown = true;
 	}
@@ -95,6 +96,7 @@ void miColision(std::string tag1, std::string tag2)
 		upDown = true;
 	}
 
+	//y las colisiones para recolectar las llaves
 	if ((tag1 == "Player" && tag2 == "blueKey") || (tag1 == "blueKey" && tag2 == "Player")) {
 		assets.sprite[1].Location.x = 5;
 		assets.sprite[1].Location.y = 1;
@@ -144,9 +146,3 @@ void miColision(std::string tag1, std::string tag2)
 	}
 }
 
-void DrawHUD()
-{
-	
-	FASG::WriteStringBuffer(10, FASG::EAligned::CENTER, HUDMessage, EForeColor::Red);
-	HUDMessage = "Enhorabuena. Has ganado. Pulsa X para salir";
-}

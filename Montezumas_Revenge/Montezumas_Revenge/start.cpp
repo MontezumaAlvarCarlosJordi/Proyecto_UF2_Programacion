@@ -1,5 +1,5 @@
 #include "start.h"
-#include "HUD.h"
+#include "HUD_colisiones.h"
 
 void InitWorld() {
 

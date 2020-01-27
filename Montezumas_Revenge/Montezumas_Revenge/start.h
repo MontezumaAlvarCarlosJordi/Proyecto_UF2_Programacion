@@ -1,9 +1,9 @@
 #pragma once
 #include "FAriasSimpleGraphics.h"
 
-//Espacio de nombres por defecto
 using namespace FASG;
 
+//funciones para empezar el juego
 void InitWorld();
 void InitPlayer();
 void InitEnemy();

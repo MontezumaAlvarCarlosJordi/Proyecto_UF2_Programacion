@@ -1,16 +1,14 @@
 #pragma once
 #include "FAriasSimpleGraphics.h"
 
-//Espacio de nombres por defecto
 using namespace FASG;
 
-//Tamaño de la ventana de consola
-const int W = 200, H = 51;
 
+const int W = 200, H = 51; //Tamaño de la ventana de consola (le hemos puesto 51, aunque sean 50, para que aparezca correctamente la terminal
+
+
+//funciones del mapa
 void DrawMap();
 
 void FirstRoom();
 
-void SecondRoom();
-
-void Escalera(int x, int y);
