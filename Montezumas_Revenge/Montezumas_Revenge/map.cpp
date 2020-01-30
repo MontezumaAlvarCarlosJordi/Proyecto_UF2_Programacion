@@ -2,14 +2,17 @@
 
 char map1[200][51];
 
+char map2[200][51];
+
 
 
 void InitMap()
 {
 	FirstRoom();
+	SecondRoom();
 }
 
-void FirstRoom(){ //diferentes comandos para dibujar el mapa con X
+void FirstRoom(){ 
 
 	for (int i = 0; i < 200; i++)
 	{
@@ -119,9 +122,17 @@ void FirstRoom(){ //diferentes comandos para dibujar el mapa con X
 	}
 }
 
+void SecondRoom()
+{
+	for (int i = 0; i < 200; i++)
+	{
+		map2[i][7] = 'X';
+	}
+}
 
 
-void DrawMap() { //y una funcion para pintar el mapa de color
+
+void DrawMap1() { //y una funcion para pintar el mapa de color
 	for (int i = 0; i < W; i++)
 	{
 		for (int j = 0; j < H; j++)
@@ -134,6 +145,19 @@ void DrawMap() { //y una funcion para pintar el mapa de color
 				map1[i][j] == ' ';
 		}
 	}
-	
+}
 
+void DrawMap2() { //y una funcion para pintar el mapa de color
+	for (int i = 0; i < W; i++)
+	{
+		for (int j = 0; j < H; j++)
+		{
+			if (map2[i][j] == 'X')
+				FASG::WritePixelBuffer(i, j, FASG::EBackColor::LightGreen);
+			else if (map2[i][j] == 'S')
+				FASG::WritePixelBuffer(i, j, FASG::EBackColor::LightGreen);
+			else
+				map2[i][j] == ' ';
+		}
+	}
 }

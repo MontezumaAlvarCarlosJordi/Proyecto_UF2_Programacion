@@ -8,7 +8,9 @@ const int W = 200, H = 51; //Tamaño de la ventana de consola (le hemos puesto 51
 
 
 //funciones del mapa
-void DrawMap();
+void DrawMap1();
+void DrawMap2();
 
 void FirstRoom();
 
+void SecondRoom();

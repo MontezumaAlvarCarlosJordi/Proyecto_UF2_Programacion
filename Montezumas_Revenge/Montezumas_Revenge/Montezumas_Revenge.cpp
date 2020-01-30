@@ -17,6 +17,7 @@ HANDLE hndl;
 bool gameOver = false;
 bool gameStart = false;
 bool gameFinish = false;
+bool mapa1 = true;
 
 int main()
 {
@@ -24,7 +25,7 @@ int main()
 	FASG::InitConsole(W, H);
 	FASG::ShowConsoleCursor(false);
 
-	InitWorld(); //iniciamos el mundo
+	InitWorld();
 
 	while (!gameStart) //entramos en el bucle de la pantalla del inicio
 	{
@@ -35,8 +36,14 @@ int main()
 
 	while (!gameOver) //entramos en el bucle del juego
 	{
+		
 		InputPlayer(gameOver);
-		DrawMap();
+		if (mapa1 == true)
+		{
+			DrawMap1();
+		}
+		else
+			DrawMap2();
 		DrawAssets();
 		MoveEnemy();
 		DrawPlayer();
