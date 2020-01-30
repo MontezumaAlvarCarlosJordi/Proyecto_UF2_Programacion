@@ -22,7 +22,7 @@ void miColision(std::string tag1, std::string tag2)
 		player1.sprite[0].Location.y = H * 0.5f - 10;
 		player1.lifes--;
 
-		InitAssets();
+		InitAssetsMapa1();
 
 		if (player1.lifes == 0) 
 		{

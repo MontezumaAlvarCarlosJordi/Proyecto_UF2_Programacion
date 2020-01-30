@@ -8,4 +8,4 @@ void InitWorld();
 void InitPlayer();
 void InitEnemy();
 void InitMap();
-void InitAssets();
+void InitAssetsMapa1();
