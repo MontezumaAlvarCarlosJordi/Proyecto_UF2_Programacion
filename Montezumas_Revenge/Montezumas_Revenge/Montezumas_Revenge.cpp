@@ -18,6 +18,7 @@ bool gameOver = false;
 bool gameStart = false;
 bool gameFinish = false;
 bool mapa1 = true;
+ERooms room = ROOM1;
 
 int main()
 {
@@ -36,16 +37,23 @@ int main()
 
 	while (!gameOver) //entramos en el bucle del juego
 	{
-
 		InputPlayer(gameOver);
-		if (mapa1 == true)
+		switch (room)
 		{
+		case ROOM1:
 			FirstRoom();
-		}
-		else
-		{
+			break;
+
+		case ROOM2:
 			SecondRoom();
+			break;
+
+		case ROOM3:
+			//ThirdRoom();
+			break;
+
 		}
+		
 		DrawMap();
 		DrawAssets();
 		MoveEnemy();

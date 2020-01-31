@@ -14,3 +14,8 @@ void DrawMap();
 void FirstRoom();
 
 void SecondRoom();
+
+enum ERooms {
+	ROOM1, ROOM2, ROOM3, ROOM4, ROOM5
+};
+

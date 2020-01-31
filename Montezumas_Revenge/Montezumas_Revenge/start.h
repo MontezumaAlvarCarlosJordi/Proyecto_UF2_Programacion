@@ -7,5 +7,4 @@ using namespace FASG;
 void InitWorld();
 void InitPlayer();
 void InitEnemy();
-void InitMap();
 void InitAssetsMapa1();

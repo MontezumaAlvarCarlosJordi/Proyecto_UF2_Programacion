@@ -7,8 +7,6 @@ void InitWorld() {
 
 	InitEnemy();
 
-	InitMap();
-
 	InitAssetsMapa1();
 
 	//Queremos colisión, así que indicamos al sistema que función nuestra tendrá que llamar cada vez que detecte una

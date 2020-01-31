@@ -2,11 +2,6 @@
 
 char map1[W][H];
 
-void InitMap()
-{
-	FirstRoom();
-	SecondRoom();
-}
 
 void FirstRoom(){ 
 
@@ -156,4 +151,3 @@ void DrawMap() { //y una funcion para pintar el mapa de color
 		}
 	}
 }
-
