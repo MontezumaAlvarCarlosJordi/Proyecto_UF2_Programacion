@@ -17,6 +17,7 @@ HANDLE hndl;
 bool gameOver = false;
 bool gameStart = false;
 bool gameFinish = false;
+bool cambioDeMapa = true;
 bool mapa1 = true;
 ERooms room = ROOM1;
 
@@ -25,8 +26,8 @@ int main()
 	
 	FASG::InitConsole(W, H);
 	FASG::ShowConsoleCursor(false);
-
-	InitWorld();
+	FASG::SetFontSizeRatio(FASG::ConsoleFontRatios::_4x6);
+	
 
 	while (!gameStart) //entramos en el bucle de la pantalla del inicio
 	{
@@ -37,23 +38,28 @@ int main()
 
 	while (!gameOver) //entramos en el bucle del juego
 	{
-		InputPlayer(gameOver);
-		switch (room)
+		if (cambioDeMapa == true)
 		{
-		case ROOM1:
-			FirstRoom();
-			break;
+			switch (room)
+			{
+			case ROOM1:
+				InitWorld();
+				cambioDeMapa = false;
+				break;
 
-		case ROOM2:
-			SecondRoom();
-			break;
+			case ROOM2:
+				SecondRoom();
+				cambioDeMapa = false;
+				break;
 
-		case ROOM3:
-			//ThirdRoom();
-			break;
+			case ROOM3:
+				//ThirdRoom();
+				break;
 
+			}
 		}
 		
+		InputPlayer(gameOver);
 		DrawMap();
 		DrawAssets();
 		MoveEnemy();

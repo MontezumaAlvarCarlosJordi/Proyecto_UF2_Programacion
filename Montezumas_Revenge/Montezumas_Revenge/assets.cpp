@@ -8,6 +8,7 @@ Assets assets;
 Sprite escalerasMapa1[3] = { Sprite("escaleras.txt"), Sprite("escaleras.txt"), Sprite("escalera2.txt") };
 Sprite puertas[4] = { Sprite("puerta.txt"),  Sprite("portal.txt"), Sprite("puertaAzul.txt"), Sprite("puertaRoja.txt") };
 
+
 void InitAssetsMapa1() { //inicializamos los assets
 
 	for (int i = 0; i < 5; i++) {
@@ -69,11 +70,10 @@ void InitAssetsMapa1() { //inicializamos los assets
 	Sprite::AddToCollisionSystem(puertas[1], "portal");
 	Sprite::AddToCollisionSystem(puertas[2], "puertaAzul");
 	Sprite::AddToCollisionSystem(puertas[3], "puertaRoja");
-
 }
 
 void DrawAssets() { //dibuja todos los sprites
-	
+
 	for (int i = 0; i < 3; i++) {
 		FASG::WriteSpriteBuffer(assets.sprite[i].Location.x, assets.sprite[i].Location.y, assets.sprite[i]);
 	}
@@ -85,5 +85,4 @@ void DrawAssets() { //dibuja todos los sprites
 	for (int i = 0; i < 4; i++) { 
 		FASG::WriteSpriteBuffer(puertas[i].Location.x, puertas[i].Location.y, puertas[i]); 
 	}
-	
 }

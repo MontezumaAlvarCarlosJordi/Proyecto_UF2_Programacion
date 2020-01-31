@@ -16,6 +16,7 @@ bool puertaAbierta[3] = {false, false, false};
 extern bool gameOver;
 extern bool mapa1;
 extern ERooms room;
+extern bool cambioDeMapa;
 
 void miColision(std::string tag1, std::string tag2)
 {	//colisiones entre enemigo y player para la reducion de vida
@@ -85,6 +86,7 @@ void miColision(std::string tag1, std::string tag2)
 		player1.sprite[0].Location.y = H * 0.5f - 10;
 
 		room = ROOM2;
+		cambioDeMapa = true;
 	}
 
 	//colisiones para la interaccion entre el player y las escaleras
