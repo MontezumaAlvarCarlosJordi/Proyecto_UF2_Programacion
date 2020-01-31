@@ -1,10 +1,6 @@
 #include "map.h"
 
-char map1[200][51];
-
-char map2[200][51];
-
-
+char map1[W][H];
 
 void InitMap()
 {
@@ -13,6 +9,12 @@ void InitMap()
 }
 
 void FirstRoom(){ 
+
+	for (int i = 0; i < W; i++) 
+		for (int j = 0; j < H; j++) 
+			map1[i][j] = ' ';
+		
+	
 
 	for (int i = 0; i < 200; i++)
 	{
@@ -74,7 +76,7 @@ void FirstRoom(){
 		}
 	}
 
-	for (int i = 200; i > (200 - 16); i--)
+	for (int i = W; i > (W - 16); i--)
 	{
 		for (int j = 22; j < (27 + 22); j++)
 		{
@@ -124,15 +126,23 @@ void FirstRoom(){
 
 void SecondRoom()
 {
+	for (int i = 0; i < W; i++) 
+		for (int j = 0; j < H; j++) 
+			map1[i][j] = ' ';
+		
+	
+
 	for (int i = 0; i < 200; i++)
 	{
-		map2[i][7] = 'X';
+		map1[i][7] = 'X';
 	}
+
 }
 
 
 
-void DrawMap1() { //y una funcion para pintar el mapa de color
+void DrawMap() { //y una funcion para pintar el mapa de color
+	
 	for (int i = 0; i < W; i++)
 	{
 		for (int j = 0; j < H; j++)
@@ -142,22 +152,8 @@ void DrawMap1() { //y una funcion para pintar el mapa de color
 			else if (map1[i][j] == 'S')
 				FASG::WritePixelBuffer(i, j, FASG::EBackColor::LightGreen);
 			else
-				map1[i][j] == ' ';
+				map1[i][j] = ' ';
 		}
 	}
 }
 
-void DrawMap2() { //y una funcion para pintar el mapa de color
-	for (int i = 0; i < W; i++)
-	{
-		for (int j = 0; j < H; j++)
-		{
-			if (map2[i][j] == 'X')
-				FASG::WritePixelBuffer(i, j, FASG::EBackColor::LightGreen);
-			else if (map2[i][j] == 'S')
-				FASG::WritePixelBuffer(i, j, FASG::EBackColor::LightGreen);
-			else
-				map2[i][j] == ' ';
-		}
-	}
-}

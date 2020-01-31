@@ -84,7 +84,8 @@ void miColision(std::string tag1, std::string tag2)
 		player1.sprite[0].Location.y = H * 0.5f - 10;
 
 		mapa1 = false;
-		DrawMap2();
+		SecondRoom();
+		DrawMap();
 	}
 
 	//colisiones para la interaccion entre el player y las escaleras

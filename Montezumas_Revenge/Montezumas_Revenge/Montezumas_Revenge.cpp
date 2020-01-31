@@ -36,14 +36,17 @@ int main()
 
 	while (!gameOver) //entramos en el bucle del juego
 	{
-		
+
 		InputPlayer(gameOver);
 		if (mapa1 == true)
 		{
-			DrawMap1();
+			FirstRoom();
 		}
 		else
-			DrawMap2();
+		{
+			SecondRoom();
+		}
+		DrawMap();
 		DrawAssets();
 		MoveEnemy();
 		DrawPlayer();
