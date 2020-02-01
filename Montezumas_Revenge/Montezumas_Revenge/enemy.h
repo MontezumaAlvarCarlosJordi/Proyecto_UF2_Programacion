@@ -22,3 +22,4 @@ enum EEnemy //estados del enemigo
 //funciones del enemigo
 void MoveEnemy();
 void DrawEnemy();
+void CleanEnemies();

@@ -2,32 +2,36 @@
 #include "map.h"
 
 
-extern char map1[200][51];
+extern char map[200][51];
 
 Enemy enemy1; //con el struct de Enemy creamos una valiable para acceder a las diferentes variables del enemigo
 
 EEnemy statusEnemy1;
 
 
+extern ERooms room;
 
-
-void InitEnemy()
+void InitEnemy1()
 {
-	//velocidad del jugador
-	enemy1.speed = 45.f;
+		//velocidad del jugador
+		enemy1.speed = 45.f;
 
-	//se asocia que sprite va a ser el enemigo
-	enemy1.sprite.LoadSprite("Enemy.txt");
+		//se asocia que sprite va a ser el enemigo
+		enemy1.sprite.LoadSprite("Enemy.txt");
 
-	//posicion inicial al empezar el juego
-	enemy1.sprite.Location.x = INITIAL_POS_ENEMY;
-	enemy1.sprite.Location.y = 45.f;
+		//posicion inicial al empezar el juego
+		enemy1.sprite.Location.x = INITIAL_POS_ENEMY;
+		enemy1.sprite.Location.y = 45.f;
 
-	// y añadimos el sprite al sistema de colisiones
-	Sprite::AddToCollisionSystem(enemy1.sprite, "Enemy");
-
+		// y añadimos el sprite al sistema de colisiones
+		Sprite::AddToCollisionSystem(enemy1.sprite, "Enemy1");
 }
 
+void CleanEnemies()
+{
+	enemy1.sprite.Location.x = 300.f;
+	enemy1.sprite.Location.y = 300.f;
+}
 
 
 void MoveEnemy() { //creamos la funcion para crear el movimiento del enemigo

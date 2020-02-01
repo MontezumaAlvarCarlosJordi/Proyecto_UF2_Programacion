@@ -12,8 +12,8 @@ void DrawMap();
 
 
 void FirstRoom();
-
 void SecondRoom();
+void ThirdRoom();
 
 enum ERooms {
 	ROOM1, ROOM2, ROOM3, ROOM4, ROOM5

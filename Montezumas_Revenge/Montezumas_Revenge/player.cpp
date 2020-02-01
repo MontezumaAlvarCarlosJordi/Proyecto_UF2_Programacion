@@ -3,7 +3,7 @@
 #include "start.h"
 
 //variables del jugador y sus estados
-extern char map1[200][51];
+extern char map[200][51];
 
 Player player1;
 
@@ -49,7 +49,7 @@ void InputPlayer(bool &gameOver) { //todo a lo que se refiere los Inputs del jug
 		}
 		if (FASG::IsKeyPressed('S'))
 		{
-			if (map1[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y + 6] == 'X')
+			if (map[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y + 6] == 'X')
 				player1.sprite[0].Location.y += 0;
 
 			else
@@ -59,7 +59,7 @@ void InputPlayer(bool &gameOver) { //todo a lo que se refiere los Inputs del jug
 	if (FASG::IsKeyPressed('A')) //movimientos de izquierda y derecha
 	{
 		statusPlayer1 = EPlayer::IZQ;
-		if (map1[(int)player1.sprite[0].Location.x - 1][(int)player1.sprite[0].Location.y] == 'X' || (map1[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y] == 'R' && puertaAbierta[2] == false))
+		if (map[(int)player1.sprite[0].Location.x - 1][(int)player1.sprite[0].Location.y] == 'X' || (map[(int)player1.sprite[0].Location.x - 1][(int)player1.sprite[0].Location.y] == 'R' && puertaAbierta[2] == false))
 			player1.sprite[0].Location.x -= 0;
 
 		else
@@ -68,7 +68,7 @@ void InputPlayer(bool &gameOver) { //todo a lo que se refiere los Inputs del jug
 	if (FASG::IsKeyPressed('D'))
 	{
 		statusPlayer1 = EPlayer::DER;
-		if (map1[(int)player1.sprite[0].Location.x + 7][(int)player1.sprite[0].Location.y] == 'X' || (map1[(int)player1.sprite[0].Location.x + 7][(int)player1.sprite[0].Location.y] == 'P' && puertaAbierta[0] == false) || (map1[(int)player1.sprite[0].Location.x + 7][(int)player1.sprite[0].Location.y] == 'A' && puertaAbierta[1] == false))
+		if (map[(int)player1.sprite[0].Location.x + 7][(int)player1.sprite[0].Location.y] == 'X' || (map[(int)player1.sprite[0].Location.x + 7][(int)player1.sprite[0].Location.y] == 'P' && puertaAbierta[0] == false) || (map[(int)player1.sprite[0].Location.x + 7][(int)player1.sprite[0].Location.y] == 'A' && puertaAbierta[1] == false))
 			player1.sprite[0].Location.x += 0;
 
 		else
@@ -89,7 +89,7 @@ void InputPlayer(bool &gameOver) { //todo a lo que se refiere los Inputs del jug
 void DrawPlayer() { //dibujar al player en el mapa
 
 	//condiciones para cuando esta en el aire o no
-	if (map1[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y + 6] == 'X' || map1[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y + 6] == 'B' || map1[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y + 6] == 'S')
+	if (map[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y + 6] == 'X' || map[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y + 6] == 'B' || map[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y + 6] == 'S')
 	{
 		player1.speedY = 0;
 		onAir = false;

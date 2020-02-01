@@ -6,7 +6,7 @@ void InitWorld() {
 
 	InitPlayer();
 
-	InitEnemy();
+	InitEnemy1();
 
 	InitAssetsMapa1();
 

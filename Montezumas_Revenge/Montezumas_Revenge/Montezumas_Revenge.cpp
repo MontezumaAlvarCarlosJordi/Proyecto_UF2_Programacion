@@ -26,7 +26,7 @@ int main()
 	
 	FASG::InitConsole(W, H);
 	FASG::ShowConsoleCursor(false);
-	FASG::SetFontSizeRatio(FASG::ConsoleFontRatios::_4x6);
+	FASG::SetFontSizeRatio(FASG::ConsoleFontRatios::_7x12);
 	
 
 	while (!gameStart) //entramos en el bucle de la pantalla del inicio
@@ -43,17 +43,24 @@ int main()
 			switch (room)
 			{
 			case ROOM1:
+				CleanAssets();
+				CleanEnemies();
 				InitWorld();
 				cambioDeMapa = false;
 				break;
 
 			case ROOM2:
+				CleanAssets();
+				CleanEnemies();
 				SecondRoom();
 				cambioDeMapa = false;
 				break;
 
 			case ROOM3:
-				//ThirdRoom();
+				CleanAssets();
+				CleanEnemies();
+				ThirdRoom();
+				cambioDeMapa = false;
 				break;
 
 			}
