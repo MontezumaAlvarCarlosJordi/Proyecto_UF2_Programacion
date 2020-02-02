@@ -74,8 +74,8 @@ void miColision(std::string tag1, std::string tag2)
 				puertaAbierta[2] = true;
 				puertas[3].Location.x = 210;
 				puertas[3].Location.y = 1;
-				assetsmapa1.llaves[2].Location.x = 210;
-				assetsmapa1.llaves[2].Location.y = 1;
+				assetsmapa3.llaves[2].Location.x = 210;
+				assetsmapa3.llaves[2].Location.y = 1;
 				inventory[i] = 'V';
 				FirstRoom();
 			}

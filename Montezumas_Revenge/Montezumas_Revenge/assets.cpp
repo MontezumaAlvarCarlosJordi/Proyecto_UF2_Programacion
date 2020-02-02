@@ -111,11 +111,11 @@ void InitAssetsMapa3() { //inicializamos los assets
 
 void CleanAssets()
 {
-	if (llaveConseguida[2] == false) {
+	if (llaveConseguida[0] == false) {
 		assetsmapa1.llaves[0].Location.x = 300.f;
 		assetsmapa1.llaves[0].Location.y = 300.f;
 	}
-	if (llaveConseguida[2] == false) {
+	if (llaveConseguida[1] == false) {
 		assetsmapa1.llaves[1].Location.x = 300.f;
 		assetsmapa1.llaves[1].Location.y = 300.f;
 	}
@@ -146,8 +146,10 @@ void CleanAssets()
 	puertas[4].Location.x = 300.f;
 	puertas[4].Location.y = 300.f;
 
-	assetsmapa3.llaves[2].Location.x = 300.f;
-	assetsmapa3.llaves[2].Location.y = 300.f;
+	if (llaveConseguida[2] == false) {
+		assetsmapa3.llaves[2].Location.x = 300.f;
+		assetsmapa3.llaves[2].Location.y = 300.f;
+	}
 }
 
 void DrawAssets() { //dibuja todos los sprites
@@ -161,8 +163,14 @@ void DrawAssets() { //dibuja todos los sprites
 	}
 
 	for (int i = 0; i < 4; i++) { 
-		if (puertaAbierta[i] == false)
-			FASG::WriteSpriteBuffer(puertas[i].Location.x, puertas[i].Location.y, puertas[i]); 
+		if (puertaAbierta[0] == false)
+			FASG::WriteSpriteBuffer(puertas[0].Location.x, puertas[0].Location.y, puertas[0]);
+
+		if (puertaAbierta[1] == false)
+			FASG::WriteSpriteBuffer(puertas[2].Location.x, puertas[2].Location.y, puertas[2]);
+
+		if (puertaAbierta[2] == false)
+			FASG::WriteSpriteBuffer(puertas[3].Location.x, puertas[3].Location.y, puertas[3]);
 	}
 
 	FASG::WriteSpriteBuffer(assetsmapa3.llaves[2].Location.x, assetsmapa3.llaves[2].Location.y, assetsmapa3.llaves[2]);
