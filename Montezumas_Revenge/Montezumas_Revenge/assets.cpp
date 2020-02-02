@@ -11,7 +11,7 @@ Sprite puertas[8] = { Sprite("puerta.txt"),  Sprite("portal.txt"), Sprite("puert
 extern bool puertaAbierta[3];
 extern bool llaveConseguida[3];
 
-void InitAssetsMapa1() { //inicializamos los assets
+void InitAssetsMapa1() { //inicializamos los assets de la habitacion/pantalla 1
 	
 	//cargamos todos los sprites para las interacciones con el jugador
 	if(llaveConseguida[0] == false){
@@ -81,11 +81,13 @@ void InitAssetsMapa1() { //inicializamos los assets
 	Sprite::AddToCollisionSystem(puertas[5], "portalDe1a2");
 }
 
-void InitAssetsMapa2()
+void InitAssetsMapa2()//inicializamos los assets de la habitacion/pantalla 2
 {
+	//cargamos todos los sprites para las interacciones con el jugador
 	puertas[6].LoadSprite("portal.txt");
 	puertas[7].LoadSprite("portal.txt");
 
+	//posicion inicial de cada sprite al empezar el juego 
 	puertas[6].Location.x = 200.f;
 	puertas[6].Location.y = 12.f;
 
@@ -95,25 +97,21 @@ void InitAssetsMapa2()
 	escalerasMapa[0].Location.x = 68.f;
 	escalerasMapa[0].Location.y = 26.f;
 
+	// y añadimos todos los sprites al sistema de colisiones
 	Sprite::AddToCollisionSystem(puertas[6], "portalDe2a1");
 	Sprite::AddToCollisionSystem(puertas[7], "portalDe2aFIN");
 }
 
-void InitAssetsMapa3() { //inicializamos los assets
-
-	puertas[1].LoadSprite("portal.txt");
-	puertas[1].Location.x = 2.f;
-	puertas[1].Location.y = 12.f;
-	Sprite::AddToCollisionSystem(puertas[1], "portalDe3a1");
+void InitAssetsMapa3() { //inicializamos los assets de la habitacion/pantalla 3
 
 	//cargamos todos los sprites para las interacciones con el jugador
 	if (llaveConseguida[2] == false) {
 		assetsmapa3.llaves[2].LoadSprite("redKey.txt");
 	}
-
 	escalerasMapa[0].LoadSprite("escaleras.txt");
 	escalerasMapa[1].LoadSprite("escaleras.txt");
 	puertas[0].LoadSprite("puerta.txt");
+	puertas[1].LoadSprite("portal.txt");
 
 	//posicion inicial de cada sprite al empezar el juego 
 	if (llaveConseguida[2] == false) {
@@ -128,6 +126,8 @@ void InitAssetsMapa3() { //inicializamos los assets
 
 	puertas[1].Location.x = 2.f;
 	puertas[1].Location.y = 12.f;
+
+
 
 	// y añadimos todos los sprites al sistema de colisiones
 	Sprite::AddToCollisionSystem(assetsmapa3.llaves[2], "redKey");

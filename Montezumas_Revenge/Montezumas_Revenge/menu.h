@@ -8,7 +8,5 @@ extern bool gameFinish;
 
 // funciones del menu
 void DrawTitulo();
-
 void Start();
-
 void Final();
