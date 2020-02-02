@@ -31,6 +31,19 @@ void miColision(std::string tag1, std::string tag2)
 		
 	}
 
+	if ((tag1 == "Player" && tag2 == "Pinchos") || (tag1 == "Pinchos" && tag2 == "Player")) {
+		player1.sprite[0].Location.x = 192.f;
+		player1.sprite[0].Location.y = H * 0.5f - 10;
+		player1.lifes--;
+
+		if (player1.lifes == 0)
+		{
+			gameOver = true;
+		}
+
+
+	}
+
 	if ((tag1 == "Player" && tag2 == "Snake1") || (tag1 == "Snake1" && tag2 == "Player")) {
 		player1.sprite[0].Location.x = 3;
 		player1.sprite[0].Location.y = H * 0.5f - 10;
