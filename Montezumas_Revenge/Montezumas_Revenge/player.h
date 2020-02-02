@@ -1,5 +1,7 @@
 #pragma once
 #include "FAriasSimpleGraphics.h"
+#include "map.h"
+#include "start.h"
 
 using namespace FASG;
 
@@ -29,3 +31,4 @@ const float ALTURA_MAX = 15.f;
 //funciones del player
 void InputPlayer(bool& gameOver);
 void DrawPlayer();
+void InitPlayer();

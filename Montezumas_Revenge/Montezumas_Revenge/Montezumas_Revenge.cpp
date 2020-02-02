@@ -36,6 +36,8 @@ int main()
 		FASG::RenderFrame();
 	}
 
+	InitPlayer();
+
 	while (!gameOver) //entramos en el bucle del juego
 	{
 		if (cambioDeMapa == true)
@@ -52,14 +54,14 @@ int main()
 			case ROOM2:
 				CleanAssets();
 				CleanEnemies();
-				InitRoom2();
+				SecondRoom();
 				cambioDeMapa = false;
 				break;
 
 			case ROOM3:
 				CleanAssets();
 				CleanEnemies();
-				ThirdRoom();
+				InitRoom3();
 				cambioDeMapa = false;
 				break;
 

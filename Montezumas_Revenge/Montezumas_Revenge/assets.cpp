@@ -3,11 +3,11 @@
 
 //con el struct de Assets creamos una valiable para acceder al struct
 Assets assetsmapa1;
-Assets assetsmapa2;
+Assets assetsmapa3;
 //declaramos los sprites que el jugador no almacena en su inventario
-Sprite escalerasMapa1[3] = { Sprite("escaleras.txt"), Sprite("escaleras.txt"), Sprite("escalera2.txt") };
+Sprite escalerasMapa[3] = { Sprite("escaleras.txt"), Sprite("escaleras.txt"), Sprite("escalera2.txt") };
 Sprite puertas[5] = { Sprite("puerta.txt"),  Sprite("portal.txt"), Sprite("puertaAzul.txt"), Sprite("puertaRoja.txt"), Sprite("portal.txt")};
-
+extern bool puertaAbierta[3];
 
 void InitAssetsMapa1() { //inicializamos los assets
 
@@ -16,42 +16,39 @@ void InitAssetsMapa1() { //inicializamos los assets
 	}
 
 	//cargamos todos los sprites para las interacciones con el jugador
-	assetsmapa1.sprite[0].LoadSprite("key.txt");
-	assetsmapa1.sprite[1].LoadSprite("blueKey.txt");
-	assetsmapa1.sprite[2].LoadSprite("redKey.txt");
+	assetsmapa1.llaves[0].LoadSprite("key.txt");
+	assetsmapa1.llaves[1].LoadSprite("blueKey.txt");
+	assetsmapa1.llaves[2].LoadSprite("redKey.txt");
 	
 
 	
-	escalerasMapa1[0].LoadSprite("escaleras.txt");
-	escalerasMapa1[1].LoadSprite("escaleras.txt");
-	escalerasMapa1[2].LoadSprite("escalera2.txt");
+	escalerasMapa[0].LoadSprite("escaleras.txt");
+	escalerasMapa[1].LoadSprite("escaleras.txt");
+	escalerasMapa[2].LoadSprite("escalera2.txt");
 	
-	puertas[0].LoadSprite("puerta.txt");
+	
 	puertas[1].LoadSprite("portal.txt");
 	puertas[2].LoadSprite("puertaAzul.txt");
 	puertas[3].LoadSprite("puertaRoja.txt");
 	puertas[4].LoadSprite("portal.txt");
 
 	//posicion inicial de cada sprite al empezar el juego 
-	assetsmapa1.sprite[0].Location.x = 25.f;
-	assetsmapa1.sprite[0].Location.y = 25.f;
-	assetsmapa1.sprite[1].Location.x = 185.f;
-	assetsmapa1.sprite[1].Location.y = 11.f;
-	assetsmapa1.sprite[2].Location.x = 170.f;
-	assetsmapa1.sprite[2].Location.y = 25.f;
+	assetsmapa1.llaves[0].Location.x = 25.f;
+	assetsmapa1.llaves[0].Location.y = 25.f;
+	assetsmapa1.llaves[1].Location.x = 185.f;
+	assetsmapa1.llaves[1].Location.y = 11.f;
+	assetsmapa1.llaves[2].Location.x = 170.f;
+	assetsmapa1.llaves[2].Location.y = 25.f;
 
-	escalerasMapa1[0].Location.x = 19.f;
-	escalerasMapa1[0].Location.y = 35.f;
-	escalerasMapa1[1].Location.x = 167.f;
-	escalerasMapa1[1].Location.y = 35.f;
-	escalerasMapa1[2].Location.x = 93.f;
-	escalerasMapa1[2].Location.y = 21.f;
+	escalerasMapa[0].Location.x = 19.f;
+	escalerasMapa[0].Location.y = 35.f;
+	escalerasMapa[1].Location.x = 167.f;
+	escalerasMapa[1].Location.y = 35.f;
+	escalerasMapa[2].Location.x = 93.f;
+	escalerasMapa[2].Location.y = 21.f;
 
 	puertas[0].Location.x = 173.f;
 	puertas[0].Location.y = 8.f;
-
-	puertas[1].Location.x = 2.f;
-	puertas[1].Location.y = 12.f;
 
 	puertas[2].Location.x = 158.f;
 	puertas[2].Location.y = 36.f;
@@ -63,48 +60,54 @@ void InitAssetsMapa1() { //inicializamos los assets
 	puertas[4].Location.y = 12.f;
 
 	// y añadimos todos los sprites al sistema de colisiones
-	Sprite::AddToCollisionSystem(assetsmapa1.sprite[0], "key");
-	Sprite::AddToCollisionSystem(assetsmapa1.sprite[1], "blueKey");
-	Sprite::AddToCollisionSystem(assetsmapa1.sprite[2], "redKey");
-	Sprite::AddToCollisionSystem(escalerasMapa1[0], "escalera");
-	Sprite::AddToCollisionSystem(escalerasMapa1[1], "escalera2");
-	Sprite::AddToCollisionSystem(escalerasMapa1[2], "escalera3");
+	Sprite::AddToCollisionSystem(assetsmapa1.llaves[0], "key");
+	Sprite::AddToCollisionSystem(assetsmapa1.llaves[1], "blueKey");
+	Sprite::AddToCollisionSystem(assetsmapa1.llaves[2], "redKey");
+	Sprite::AddToCollisionSystem(escalerasMapa[0], "escalera");
+	Sprite::AddToCollisionSystem(escalerasMapa[1], "escalera2");
+	Sprite::AddToCollisionSystem(escalerasMapa[2], "escalera3");
 	Sprite::AddToCollisionSystem(puertas[0], "puerta");
-	Sprite::AddToCollisionSystem(puertas[1], "portal");
 	Sprite::AddToCollisionSystem(puertas[2], "puertaAzul");
 	Sprite::AddToCollisionSystem(puertas[3], "puertaRoja");
 	Sprite::AddToCollisionSystem(puertas[4], "portal2");
 }
-void InitAssetsMapa2() { //inicializamos los assets
+void InitAssetsMapa3() { //inicializamos los assets
 
 	//cargamos todos los sprites para las interacciones con el jugador
-	assetsmapa2.sprite[0].LoadSprite("key.txt");
+	assetsmapa3.llaves[0].LoadSprite("key.txt");
 
+	escalerasMapa[0].LoadSprite("escaleras.txt");
+	escalerasMapa[1].LoadSprite("escaleras.txt");
+	puertas[0].LoadSprite("puerta.txt");
 
 	//posicion inicial de cada sprite al empezar el juego 
-	assetsmapa2.sprite[0].Location.x = 25.f;
-	assetsmapa2.sprite[0].Location.y = 25.f;
+	assetsmapa3.llaves[0].Location.x = 125.f;
+	assetsmapa3.llaves[0].Location.y = 40.f;
 
+	puertas[1].Location.x = 2.f;
+	puertas[1].Location.y = 12.f;
 
 	// y añadimos todos los sprites al sistema de colisiones
-	Sprite::AddToCollisionSystem(assetsmapa2.sprite[0], "key");
+	Sprite::AddToCollisionSystem(assetsmapa3.llaves[0], "key");
+
+	Sprite::AddToCollisionSystem(puertas[1], "portal");
 }
 
 void CleanAssets()
 {
-	assetsmapa1.sprite[0].Location.x = 300.f;
-	assetsmapa1.sprite[0].Location.y = 300.f;
-	assetsmapa1.sprite[1].Location.x = 300.f;
-	assetsmapa1.sprite[1].Location.y = 300.f;
-	assetsmapa1.sprite[2].Location.x = 300.f;
-	assetsmapa1.sprite[2].Location.y = 300.f;
+	assetsmapa1.llaves[0].Location.x = 300.f;
+	assetsmapa1.llaves[0].Location.y = 300.f;
+	assetsmapa1.llaves[1].Location.x = 300.f;
+	assetsmapa1.llaves[1].Location.y = 300.f;
+	assetsmapa1.llaves[2].Location.x = 300.f;
+	assetsmapa1.llaves[2].Location.y = 300.f;
 
-	escalerasMapa1[0].Location.x = 300.f;
-	escalerasMapa1[0].Location.y = 300.f;
-	escalerasMapa1[1].Location.x = 300.f;
-	escalerasMapa1[1].Location.y = 300.f;
-	escalerasMapa1[2].Location.x = 300.f;
-	escalerasMapa1[2].Location.y = 300.f;
+	escalerasMapa[0].Location.x = 300.f;
+	escalerasMapa[0].Location.y = 300.f;
+	escalerasMapa[1].Location.x = 300.f;
+	escalerasMapa[1].Location.y = 300.f;
+	escalerasMapa[2].Location.x = 300.f;
+	escalerasMapa[2].Location.y = 300.f;
 
 	puertas[0].Location.x = 300.f;
 	puertas[0].Location.y = 300.f;
@@ -121,23 +124,24 @@ void CleanAssets()
 	puertas[4].Location.x = 300.f;
 	puertas[4].Location.y = 300.f;
 
-	assetsmapa2.sprite[0].Location.x = 300.f;
-	assetsmapa2.sprite[0].Location.y = 300.f;
+	assetsmapa3.llaves[0].Location.x = 300.f;
+	assetsmapa3.llaves[0].Location.y = 300.f;
 }
 
 void DrawAssets() { //dibuja todos los sprites
 
 	for (int i = 0; i < 3; i++) {
-		FASG::WriteSpriteBuffer(assetsmapa1.sprite[i].Location.x, assetsmapa1.sprite[i].Location.y, assetsmapa1.sprite[i]);
+		FASG::WriteSpriteBuffer(assetsmapa1.llaves[i].Location.x, assetsmapa1.llaves[i].Location.y, assetsmapa1.llaves[i]);
 	}
 	
 	for (int i = 0; i < 3; i++) {
-		FASG::WriteSpriteBuffer(escalerasMapa1[i].Location.x, escalerasMapa1[i].Location.y, escalerasMapa1[i]);
+		FASG::WriteSpriteBuffer(escalerasMapa[i].Location.x, escalerasMapa[i].Location.y, escalerasMapa[i]);
 	}
 
 	for (int i = 0; i < 4; i++) { 
-		FASG::WriteSpriteBuffer(puertas[i].Location.x, puertas[i].Location.y, puertas[i]); 
+		if (puertaAbierta[i] == false)
+			FASG::WriteSpriteBuffer(puertas[i].Location.x, puertas[i].Location.y, puertas[i]); 
 	}
 
-	FASG::WriteSpriteBuffer(assetsmapa2.sprite[0].Location.x, assetsmapa2.sprite[0].Location.y, assetsmapa2.sprite[0]);
+	FASG::WriteSpriteBuffer(assetsmapa3.llaves[0].Location.x, assetsmapa3.llaves[0].Location.y, assetsmapa3.llaves[0]);
 }

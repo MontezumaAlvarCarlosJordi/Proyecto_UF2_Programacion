@@ -4,10 +4,10 @@
 #include "HUD_colisiones.h"
 #include "map.h"
 #include "assets.h"
+#include "player.h"
 
 using namespace FASG;
 
 //funciones para empezar el juego
 void InitRoom1();
-void InitRoom2();
-void InitPlayer();
+void InitRoom3();

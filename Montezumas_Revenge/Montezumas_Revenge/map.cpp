@@ -153,10 +153,8 @@ void ThirdRoom()
 			map[i][j] = 'X';
 
 	for (int i = 170; i < W; i++)
-		for (int j = 7; j < 35; j++)
+		for (int j = 7; j < 49; j++)
 			map[i][j] = 'X';
-
-
 }
 
 

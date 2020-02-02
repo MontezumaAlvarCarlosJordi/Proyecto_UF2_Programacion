@@ -1,6 +1,5 @@
 #include "player.h"
-#include "map.h"
-#include "start.h"
+
 
 //variables del jugador y sus estados
 extern char map[200][51];

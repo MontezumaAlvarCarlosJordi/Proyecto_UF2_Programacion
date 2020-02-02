@@ -4,8 +4,6 @@
 
 void InitRoom1() {
 
-	InitPlayer();
-
 	InitEnemy1();
 
 	InitAssetsMapa1();
@@ -19,12 +17,12 @@ void InitRoom1() {
 	Sprite::SetCollisionCallback(miColision);
 }
 
-void InitRoom2() {
+void InitRoom3() {
 
 	InitEnemy2();
 
-	InitAssetsMapa2();
+	InitAssetsMapa3();
 
-	SecondRoom();
+	ThirdRoom();
 	Sprite::SetCollisionCallback(miColision);
 }
