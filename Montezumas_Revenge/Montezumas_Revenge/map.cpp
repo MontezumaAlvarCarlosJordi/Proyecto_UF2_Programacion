@@ -119,12 +119,12 @@ void SecondRoom()
 		for (int j = 0; j < H; j++)
 			map[i][j] = ' ';
 
-
-
 	for (int i = 0; i < 200; i++)
 	{
 		map[i][7] = 'X';
 	}
+
+
 }
 
 void ThirdRoom()
@@ -145,8 +145,11 @@ void ThirdRoom()
 	for (int i = 0; i < 200; i++)
 			map[i][49] = 'X';
 
-	for (int i = 110; i < 124; i++)
+	for (int i = 110; i < 110+14; i++)
 		map[i][21] = 'S';
+
+	for (int i = 75; i < 75+14; i++)
+		map[i][35] = 'S';
 	
 	for (int i = 0; i < 30; i++)
 		for (int j = 21; j < 49; j++)
@@ -156,8 +159,6 @@ void ThirdRoom()
 		for (int j = 7; j < 49; j++)
 			map[i][j] = 'X';
 }
-
-
 
 void DrawMap() { //y una funcion para pintar el mapa de color
 	

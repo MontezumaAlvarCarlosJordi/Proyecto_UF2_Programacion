@@ -14,7 +14,6 @@ extern Sprite puertas[4];
 extern bool upDown;
 bool puertaAbierta[3] = {false, false, false};
 extern bool gameOver;
-extern bool mapa1;
 extern ERooms room;
 extern bool cambioDeMapa;
 
@@ -77,24 +76,25 @@ void miColision(std::string tag1, std::string tag2)
 			}
 		}
 	}
+	
 	//colision entre el portal que te lleva a la pantalla final
-	if ((tag1 == "Player" && tag2 == "portal") || (tag1 == "portal" && tag2 == "Player")) {
+	if ((tag1 == "Player" && tag2 == "portalDe1a3") || (tag1 == "portal2" && tag2 == "portalDe1a3")) {
+
+		player1.sprite[0].Location.x = 3;	
+
+		room = ROOM3;
+		cambioDeMapa = true;
+	}
+
+	if ((tag1 == "Player" && tag2 == "portalDe3a1") || (tag1 == "portal" && tag2 == "portalDe3a1")) {
 		
 		player1.sprite[0].Location.x = 192.f;
-		player1.sprite[0].Location.y = H * 0.5f - 10;
 
 		room = ROOM1;
 		cambioDeMapa = true;
 	}
 
-	if ((tag1 == "Player" && tag2 == "portal2") || (tag1 == "portal2" && tag2 == "Player")) {
-
-		player1.sprite[0].Location.x = 3;
-		player1.sprite[0].Location.y = H * 0.5f - 10;
-
-		room = ROOM3;
-		cambioDeMapa = true;
-	}
+	
 
 	//colisiones para la interaccion entre el player y las escaleras
 	if ((tag1 == "Player" && tag2 == "escalera") || (tag1 == "escalera" && tag2 == "Player")) {

@@ -18,7 +18,6 @@ bool gameOver = false;
 bool gameStart = false;
 bool gameFinish = false;
 bool cambioDeMapa = true;
-bool mapa1 = true;
 ERooms room = ROOM1;
 
 int main()
