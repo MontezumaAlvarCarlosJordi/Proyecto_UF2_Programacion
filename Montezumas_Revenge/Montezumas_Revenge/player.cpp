@@ -49,7 +49,11 @@ void InputPlayer(bool &gameOver) { //todo a lo que se refiere los Inputs del jug
 		
 		if (FASG::IsKeyPressed('W'))
 		{
-			player1.sprite[0].Location.y -= player1.speed * FASG::GetDeltaTime();
+			if (map[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y] == 'X') {
+				player1.sprite[0].Location.y -= 0;
+			}
+			else
+				player1.sprite[0].Location.y -= player1.speed * FASG::GetDeltaTime();
 		}
 		if (FASG::IsKeyPressed('S'))
 		{
@@ -63,9 +67,10 @@ void InputPlayer(bool &gameOver) { //todo a lo que se refiere los Inputs del jug
 	if (FASG::IsKeyPressed('A')) //movimientos de izquierda y derecha
 	{
 		statusPlayer1 = EPlayer::IZQ;
-		if (map[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y] == 'X')
+		if (map[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y] == 'X') {
 			player1.sprite[0].Location.x -= 0;
 
+		}
 		else
 			player1.sprite[0].Location.x -= player1.speed * FASG::GetDeltaTime();
 	}
@@ -81,9 +86,12 @@ void InputPlayer(bool &gameOver) { //todo a lo que se refiere los Inputs del jug
 
 	if (FASG::IsKeyDown(' ') && onAir == false) //salto
 	{
-		player1.sprite[0].Location.y--;
-		player1.speedY = JUMP_Y_IMPULSE;
-		onAir = true;
+		if (map[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y] == 'X')
+			player1.sprite[0].Location.y -= 0;
+		else
+			player1.sprite[0].Location.y--;
+			player1.speedY = JUMP_Y_IMPULSE;
+			onAir = true;
 	}
 }
 
