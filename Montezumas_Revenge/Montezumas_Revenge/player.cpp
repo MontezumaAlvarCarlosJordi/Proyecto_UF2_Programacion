@@ -57,7 +57,7 @@ void InputPlayer(bool &gameOver) { //todo a lo que se refiere los Inputs del jug
 	if (FASG::IsKeyPressed('A')) //movimientos de izquierda y derecha
 	{
 		statusPlayer1 = EPlayer::IZQ;
-		if (map[(int)player1.sprite[0].Location.x - 1][(int)player1.sprite[0].Location.y] == 'X' || (map[(int)player1.sprite[0].Location.x - 1][(int)player1.sprite[0].Location.y] == 'R' && puertaAbierta[2] == false))
+		if (map[(int)player1.sprite[0].Location.x - 1][(int)player1.sprite[0].Location.y] == 'X')
 			player1.sprite[0].Location.x -= 0;
 
 		else
@@ -66,7 +66,7 @@ void InputPlayer(bool &gameOver) { //todo a lo que se refiere los Inputs del jug
 	if (FASG::IsKeyPressed('D'))
 	{
 		statusPlayer1 = EPlayer::DER;
-		if (map[(int)player1.sprite[0].Location.x + 7][(int)player1.sprite[0].Location.y] == 'X' || (map[(int)player1.sprite[0].Location.x + 7][(int)player1.sprite[0].Location.y] == 'P' && puertaAbierta[0] == false) || (map[(int)player1.sprite[0].Location.x + 7][(int)player1.sprite[0].Location.y] == 'A' && puertaAbierta[1] == false))
+		if (map[(int)player1.sprite[0].Location.x + 7][(int)player1.sprite[0].Location.y] == 'X')
 			player1.sprite[0].Location.x += 0;
 
 		else

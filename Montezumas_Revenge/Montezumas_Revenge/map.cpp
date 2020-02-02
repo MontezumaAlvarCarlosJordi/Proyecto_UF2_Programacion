@@ -2,7 +2,7 @@
 
 char map[W][H];
 
-
+extern bool puertaAbierta[3];
 void FirstRoom(){ 
 
 	for (int i = 0; i < W; i++) 
@@ -51,7 +51,11 @@ void FirstRoom(){
 	{
 		for (int j = 8; j < (13 + 8); j++)
 		{
-			map[i][j] = 'R';
+			if (puertaAbierta[2] == false) //Rojo
+				map[i][j] = 'X';
+
+			else
+				map[i][j] = ' ';
 		}
 	}
 
@@ -59,7 +63,21 @@ void FirstRoom(){
 	{
 		for (int j = 8; j < (13 + 8); j++)
 		{
-			map[i][j] = 'P';
+			if (puertaAbierta[0] == false) //Amarillo
+				map[i][j] = 'X';
+
+			else
+				map[i][j] = ' ';
+		}
+	}
+
+	for (int i = 158; i < 158 + 5; i++) {
+		for (int j = 36; j < 36 + 13; j++) {
+			if (puertaAbierta[1] == false) //Azul
+				map[i][j] = 'X';
+
+			else
+				map[i][j] = ' ';
 		}
 	}
 
@@ -94,11 +112,7 @@ void FirstRoom(){
 		map[167 + i][35] = 'S';
 	}
 
-	for (int i = 0; i < 5; i++) {
-		for (int j = 0; j < 13; j++) {
-			map[158 + i][36 + j] = 'A';
-		}
-	}
+	
 
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 13; j++) {

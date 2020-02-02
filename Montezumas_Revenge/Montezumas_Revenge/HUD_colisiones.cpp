@@ -42,7 +42,7 @@ void miColision(std::string tag1, std::string tag2)
 				assetsmapa1.llaves[0].Location.x = 210;
 				assetsmapa1.llaves[0].Location.y = 1;
 				assetsmapa1.inventory[i] = 'V';
-
+				FirstRoom();
 			}
 		}
 		
@@ -58,6 +58,7 @@ void miColision(std::string tag1, std::string tag2)
 				assetsmapa1.llaves[1].Location.x = 210;
 				assetsmapa1.llaves[1].Location.y = 1;
 				assetsmapa1.inventory[i] = 'V';
+				FirstRoom();
 			}
 		}
 
@@ -73,6 +74,7 @@ void miColision(std::string tag1, std::string tag2)
 				assetsmapa1.llaves[2].Location.x = 210;
 				assetsmapa1.llaves[2].Location.y = 1;
 				assetsmapa1.inventory[i] = 'V';
+				FirstRoom();
 			}
 		}
 	}
