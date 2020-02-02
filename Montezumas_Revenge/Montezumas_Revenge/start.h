@@ -10,4 +10,5 @@ using namespace FASG;
 
 //funciones para empezar el juego
 void InitRoom1();
+void InitRoom2();
 void InitRoom3();

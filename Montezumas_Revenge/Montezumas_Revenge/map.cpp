@@ -134,9 +134,33 @@ void SecondRoom()
 			map[i][j] = ' ';
 
 	for (int i = 0; i < 200; i++)
-	{
 		map[i][7] = 'X';
-	}
+
+	for (int i = 180; i < 200; i++)
+		map[i][21] = 'X';
+
+	for (int i = 140; i < 160; i++)
+		map[i][26] = 'X';
+
+	for (int i = 101; i < 121; i++)
+		map[i][32] = 'X';
+
+	for (int i = 82; i < 98; i++)
+		map[i][26] = 'X';
+
+	for (int i = 68; i < 82; i++)
+		map[i][26] = 'S';
+
+	for (int i = 50; i < 82; i++)
+		map[i][40] = 'X';
+
+	for (int i = 0; i < 30; i++)
+		for (int j = 37; j < H; j++)
+			map[i][j] = 'X';
+
+	for (int i = 0; i < 30; i++)
+		for (int j = 7; j < 24; j++)
+			map[i][j] = 'X';
 
 
 }

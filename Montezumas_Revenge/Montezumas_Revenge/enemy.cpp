@@ -64,6 +64,9 @@ void CleanEnemies()
 	enemy1.sprite.Location.x = 300.f;
 	enemy1.sprite.Location.y = 300.f;
 
+	enemy2.sprite.Location.x = 300.f;
+	enemy2.sprite.Location.y = 300.f;
+
 	enemy3[0].sprite.Location.x = 300.f;
 	enemy3[0].sprite.Location.y = 300.f;
 
@@ -99,6 +102,8 @@ void MoveEnemy() { //creamos la funcion para crear el movimiento del enemigo
 void DrawEnemy() { //y la funcion para dibujarlo
 
 	FASG::WriteSpriteBuffer(enemy1.sprite.Location.x, enemy1.sprite.Location.y, enemy1.sprite);
+
+	FASG::WriteSpriteBuffer(enemy2.sprite.Location.x, enemy2.sprite.Location.y, enemy2.sprite);
 
 	for (int i = 0; i < 2; i++) {
 		FASG::WriteSpriteBuffer(enemy3[i].sprite.Location.x, enemy3[i].sprite.Location.y, enemy3[i].sprite);

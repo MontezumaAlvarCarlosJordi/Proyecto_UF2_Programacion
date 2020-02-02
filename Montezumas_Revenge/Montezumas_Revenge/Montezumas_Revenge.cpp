@@ -53,7 +53,7 @@ int main()
 			case ROOM2:
 				CleanAssets();
 				CleanEnemies();
-				SecondRoom();
+				InitRoom2();
 				cambioDeMapa = false;
 				break;
 

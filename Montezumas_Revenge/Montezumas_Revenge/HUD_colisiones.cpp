@@ -1,9 +1,5 @@
 #include "HUD_colisiones.h"
-#include "map.h"
-#include "start.h"
-#include "assets.h"
-#include "enemy.h"
-#include "player.h"
+
 
 
 //variables necesarias para las condiciones de colision entre los diferentes sprites
@@ -109,21 +105,38 @@ void miColision(std::string tag1, std::string tag2)
 	}
 	
 	//colision entre el portal que te lleva a la pantalla final
-	if ((tag1 == "Player" && tag2 == "portalDe1a3") || (tag1 == "portal2" && tag2 == "portalDe1a3")) {
+	if ((tag1 == "Player" && tag2 == "portalDe1a3") || (tag1 == "portalDe1a3" && tag2 == "Player")) {
 
-		player1.sprite[0].Location.x = 3;	
+		player1.sprite[0].Location.x = 3;
 
 		room = ROOM3;
 		cambioDeMapa = true;
 	}
 
-	if ((tag1 == "Player" && tag2 == "portalDe3a1") || (tag1 == "portal" && tag2 == "portalDe3a1")) {
-		
+	if ((tag1 == "Player" && tag2 == "portalDe3a1") || (tag1 == "portalDe3a1" && tag2 == "Player")) {
+
 		player1.sprite[0].Location.x = 192.f;
 
 		room = ROOM1;
 		cambioDeMapa = true;
 	}
+
+	if ((tag1 == "Player" && tag2 == "portalDe1a2") || (tag1 == "portalDe1a2" && tag2 == "Player")) {
+
+		player1.sprite[0].Location.x = 192.f;
+
+		room = ROOM2;
+		cambioDeMapa = true;
+	}
+
+	if ((tag1 == "Player" && tag2 == "portalDe2a1") || (tag1 == "portalDe2a1" && tag2 == "Player")) {
+
+		player1.sprite[0].Location.x = 3.f;
+
+		room = ROOM1;
+		cambioDeMapa = true;
+	}
+
 
 	
 
