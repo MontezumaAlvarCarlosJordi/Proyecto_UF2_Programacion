@@ -4,21 +4,23 @@
 //con el struct de Assets creamos una valiable para acceder al struct
 Assets assetsmapa1;
 Assets assetsmapa3;
+extern char inventory[5];
 //declaramos los sprites que el jugador no almacena en su inventario
 Sprite escalerasMapa[3] = { Sprite("escaleras.txt"), Sprite("escaleras.txt"), Sprite("escalera2.txt") };
 Sprite puertas[5] = { Sprite("puerta.txt"),  Sprite("portal.txt"), Sprite("puertaAzul.txt"), Sprite("puertaRoja.txt"), Sprite("portal.txt")};
 extern bool puertaAbierta[3];
+extern bool llaveConseguida[3];
 
 void InitAssetsMapa1() { //inicializamos los assets
-
-	for (int i = 0; i < 5; i++) {
-		assetsmapa1.inventory[i] = 'V';// iniciamos el inventario con V de vacio
-	}
-
-	//cargamos todos los sprites para las interacciones con el jugador
-	assetsmapa1.llaves[0].LoadSprite("key.txt");
-	assetsmapa1.llaves[1].LoadSprite("blueKey.txt");
 	
+	//cargamos todos los sprites para las interacciones con el jugador
+	if(llaveConseguida[0] == false){
+		assetsmapa1.llaves[0].LoadSprite("key.txt");
+	}
+	
+	if (llaveConseguida[1] == false) {
+		assetsmapa1.llaves[1].LoadSprite("blueKey.txt");
+	}
 
 	
 	escalerasMapa[0].LoadSprite("escaleras.txt");
@@ -32,10 +34,15 @@ void InitAssetsMapa1() { //inicializamos los assets
 	puertas[4].LoadSprite("portal.txt");
 
 	//posicion inicial de cada sprite al empezar el juego 
-	assetsmapa1.llaves[0].Location.x = 25.f;
-	assetsmapa1.llaves[0].Location.y = 25.f;
-	assetsmapa1.llaves[1].Location.x = 185.f;
-	assetsmapa1.llaves[1].Location.y = 11.f;
+	if (llaveConseguida[0] == false) {
+		assetsmapa1.llaves[0].Location.x = 25.f;
+		assetsmapa1.llaves[0].Location.y = 25.f;
+	}
+
+	if (llaveConseguida[1] == false) {
+		assetsmapa1.llaves[1].Location.x = 185.f;
+		assetsmapa1.llaves[1].Location.y = 11.f;
+	}
 
 	escalerasMapa[0].Location.x = 19.f;
 	escalerasMapa[0].Location.y = 35.f;
@@ -71,15 +78,19 @@ void InitAssetsMapa1() { //inicializamos los assets
 void InitAssetsMapa3() { //inicializamos los assets
 
 	//cargamos todos los sprites para las interacciones con el jugador
-	assetsmapa3.llaves[2].LoadSprite("redKey.txt");
+	if (llaveConseguida[2] == false) {
+		assetsmapa3.llaves[2].LoadSprite("redKey.txt");
+	}
 
 	escalerasMapa[0].LoadSprite("escaleras.txt");
 	escalerasMapa[1].LoadSprite("escaleras.txt");
 	puertas[0].LoadSprite("puerta.txt");
 
 	//posicion inicial de cada sprite al empezar el juego 
-	assetsmapa3.llaves[2].Location.x = 125.f;
-	assetsmapa3.llaves[2].Location.y = 40.f;
+	if (llaveConseguida[2] == false) {
+		assetsmapa3.llaves[2].Location.x = 125.f;
+		assetsmapa3.llaves[2].Location.y = 40.f;
+	}
 
 	escalerasMapa[0].Location.x = 110.f;
 	escalerasMapa[0].Location.y = 21.f;
@@ -100,12 +111,18 @@ void InitAssetsMapa3() { //inicializamos los assets
 
 void CleanAssets()
 {
-	assetsmapa1.llaves[0].Location.x = 300.f;
-	assetsmapa1.llaves[0].Location.y = 300.f;
-	assetsmapa1.llaves[1].Location.x = 300.f;
-	assetsmapa1.llaves[1].Location.y = 300.f;
-	assetsmapa1.llaves[2].Location.x = 300.f;
-	assetsmapa1.llaves[2].Location.y = 300.f;
+	if (llaveConseguida[2] == false) {
+		assetsmapa1.llaves[0].Location.x = 300.f;
+		assetsmapa1.llaves[0].Location.y = 300.f;
+	}
+	if (llaveConseguida[2] == false) {
+		assetsmapa1.llaves[1].Location.x = 300.f;
+		assetsmapa1.llaves[1].Location.y = 300.f;
+	}
+	if (llaveConseguida[2] == false) {
+		assetsmapa1.llaves[2].Location.x = 300.f;
+		assetsmapa1.llaves[2].Location.y = 300.f;
+	}
 
 	escalerasMapa[0].Location.x = 300.f;
 	escalerasMapa[0].Location.y = 300.f;

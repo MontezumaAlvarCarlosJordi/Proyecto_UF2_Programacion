@@ -14,8 +14,14 @@ bool upDown = false;
 
 extern bool puertaAbierta[3];
 
+extern char inventory[5];
+
 void InitPlayer() { //se inician los parametros del jugador
 	
+	for (int i = 0; i < 5; i++) {
+		inventory[i] = 'V';// iniciamos el inventario con V de vacio
+	}
+
 	//velocidad del jugador
 	player1.speed = 50.f;
 
@@ -57,7 +63,7 @@ void InputPlayer(bool &gameOver) { //todo a lo que se refiere los Inputs del jug
 	if (FASG::IsKeyPressed('A')) //movimientos de izquierda y derecha
 	{
 		statusPlayer1 = EPlayer::IZQ;
-		if (map[(int)player1.sprite[0].Location.x - 1][(int)player1.sprite[0].Location.y] == 'X')
+		if (map[(int)player1.sprite[0].Location.x][(int)player1.sprite[0].Location.y] == 'X')
 			player1.sprite[0].Location.x -= 0;
 
 		else
