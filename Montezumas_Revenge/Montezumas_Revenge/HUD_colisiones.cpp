@@ -141,8 +141,6 @@ void miColision(std::string tag1, std::string tag2)
 	}
 	
 
-	
-
 	//colisiones para la interaccion entre el player y las escaleras
 	if ((tag1 == "Player" && tag2 == "escalera") || (tag1 == "escalera" && tag2 == "Player")) {
 		upDown = true;
