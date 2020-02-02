@@ -2,7 +2,7 @@
 
 
 
-void InitRoom1() {
+void InitRoom1() { //inicializamos la habitacion 1
 
 	InitEnemy1();
 
@@ -17,7 +17,7 @@ void InitRoom1() {
 	Sprite::SetCollisionCallback(miColision);
 }
 
-void InitRoom2() {
+void InitRoom2() {//inicializamos la habitacion 2
 
 	InitEnemy2();
 
@@ -27,7 +27,7 @@ void InitRoom2() {
 	Sprite::SetCollisionCallback(miColision);
 }
 
-void InitRoom3() {
+void InitRoom3() { //inicializamos la habitacion 3
 
 	InitEnemy3();
 

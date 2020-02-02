@@ -39,9 +39,12 @@ int main()
 
 	while (!gameOver) //entramos en el bucle del juego
 	{
-		if (cambioDeMapa == true)
+		while (_kbhit())
+			_getch();
+
+		if (cambioDeMapa == true) 
 		{
-			switch (room)
+			switch (room) //hacemos un switch/case para averiguar en que habitacion esta
 			{
 			case ROOM1:
 				CleanAssets();
@@ -66,7 +69,7 @@ int main()
 
 			}
 		}
-		
+		//imprimimos toda la pantalla con los diferentes sprites:
 		DrawMap();
 		DrawAssets();
 		MoveEnemy();
@@ -83,14 +86,7 @@ int main()
 		FASG::RenderFrame();
 	}
 
-
-	//Elimina las entradas del player en el buffer del teclado
-	//(todos los 'A' y 'D' del movimiento...
-	while (_kbhit())
-		_getch();
-
-	//Espera cualquier tecla
-	while (!_kbhit());
+	
 
 	FASG::DestroyConsole();
 }

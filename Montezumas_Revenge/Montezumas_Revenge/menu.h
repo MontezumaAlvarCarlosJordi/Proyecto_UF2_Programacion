@@ -1,5 +1,6 @@
 #pragma once
 #include "FAriasSimpleGraphics.h"
+#include "player.h"
 #include <iostream>
 
 //booleanos para cerrar los bucles

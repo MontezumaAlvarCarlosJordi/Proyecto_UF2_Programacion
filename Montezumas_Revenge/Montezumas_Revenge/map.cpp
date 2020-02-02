@@ -3,14 +3,15 @@
 char map[W][H];
 
 extern bool puertaAbierta[3];
-void FirstRoom(){ 
 
-	for (int i = 0; i < W; i++) 
+void FirstRoom(){ //funcion para crear la estructura de la primera habitacion
+
+	for (int i = 0; i < W; i++) //primero vaciamos la matriz
 		for (int j = 0; j < H; j++) 
 			map[i][j] = ' ';
 		
 	
-
+	// y luego la rellenamos de diferentes formas
 	for (int i = 0; i < 200; i++)
 	{
 		map[i][7] = 'X';
@@ -127,12 +128,14 @@ void FirstRoom(){
 	}
 }
 
-void SecondRoom()
+void SecondRoom()//funcion para crear la estructura de la segunda habitacion
 {
-	for (int i = 0; i < W; i++)
+	for (int i = 0; i < W; i++) //primero vaciamos la matriz
 		for (int j = 0; j < H; j++)
 			map[i][j] = ' ';
 
+
+	// y luego la rellenamos de diferentes formas
 	for (int i = 0; i < 200; i++)
 		map[i][7] = 'X';
 
@@ -165,12 +168,14 @@ void SecondRoom()
 
 }
 
-void ThirdRoom()
+void ThirdRoom() //funcion para crear la estructura de la tercera habitacion
 {
-	for (int i = 0; i < W; i++)
+	for (int i = 0; i < W; i++) //primero vaciamos la matriz
 		for (int j = 0; j < H; j++)
 			map[i][j] = ' ';
 
+
+	// y luego la rellenamos de diferentes formas
 	for (int i = 0; i < 200; i++)
 		map[i][7] = 'X';
 

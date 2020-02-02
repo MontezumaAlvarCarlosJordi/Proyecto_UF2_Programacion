@@ -2,6 +2,7 @@
 
 FASG::Sprite Titulo = FASG::Sprite("textoMenu.txt"); //declaracion del titulo 
 
+extern Player player1;
 
 void DrawTitulo() { //dibujamos el titulo en la pantalla de inicio y final
 

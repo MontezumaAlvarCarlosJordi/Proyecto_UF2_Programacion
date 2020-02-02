@@ -138,7 +138,7 @@ void InitAssetsMapa3() { //inicializamos los assets de la habitacion/pantalla 3
 	Sprite::AddToCollisionSystem(escalerasMapa[1], "escalera2");
 }
 
-void CleanAssets()
+void CleanAssets() //limpiamos los assets de la pantalla
 {
 	if (llaveConseguida[0] == false) {
 		assetsmapa1.llaves[0].Location.x = 300.f;

@@ -2,7 +2,8 @@
 
 extern char map[200][51];
 
-Enemy enemy1; //con el struct de Enemy creamos una valiable para acceder a las diferentes variables del enemigo
+//con el struct de Enemy creamos una valiable para acceder a las diferentes variables del enemigo 1, 2 o 3
+Enemy enemy1;
 Enemy enemy2;
 Enemy enemy3[2];
 
@@ -59,7 +60,7 @@ void InitEnemy3()
 	Sprite::AddToCollisionSystem(enemy3[1].sprite, "Snake2");
 }
 
-void CleanEnemies()
+void CleanEnemies() //limpiamos los enemies de la pantalla
 {
 	enemy1.sprite.Location.x = 300.f;
 	enemy1.sprite.Location.y = 300.f;
@@ -99,7 +100,7 @@ void MoveEnemy() { //creamos la funcion para crear el movimiento del enemigo
 	}
 }
 
-void DrawEnemy() { //y la funcion para dibujarlo
+void DrawEnemy() { //y la funcion para dibujarlos
 
 	FASG::WriteSpriteBuffer(enemy1.sprite.Location.x, enemy1.sprite.Location.y, enemy1.sprite);
 

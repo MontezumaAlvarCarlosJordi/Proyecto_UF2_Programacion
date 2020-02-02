@@ -17,7 +17,7 @@ char inventory[5];
 bool llaveConseguida[3] = { false, false, false };
 
 void miColision(std::string tag1, std::string tag2)
-{	//colisiones entre enemigo y player para la reducion de vida
+{	//colisiones entre enemigos y player para la reducion de vida:
 	if ((tag1 == "Player" && tag2 == "Enemy1") || (tag1 == "Enemy1" && tag2 == "Player")) {
 		player1.sprite[0].Location.x = W * 0.5f;
 		player1.sprite[0].Location.y = H * 0.5f - 10;
@@ -69,6 +69,7 @@ void miColision(std::string tag1, std::string tag2)
 
 
 	}
+
 	//colisiones entre puerta y player para abrirlas cuando haya posesion de llave
 	if ((tag1 == "Player" && tag2 == "puerta") || (tag1 == "puerta" && tag2 == "Player")) {
 		for (int i = 0; i < 5; i++) {
@@ -117,7 +118,7 @@ void miColision(std::string tag1, std::string tag2)
 		}
 	}
 	
-	//colision entre el portal que te lleva a la pantalla final
+	//colisiones entre el player y los diferentes portales para llevarl entre las diferentes habitaciones
 	if ((tag1 == "Player" && tag2 == "portalDe1a3") || (tag1 == "portalDe1a3" && tag2 == "Player")) {
 
 		player1.sprite[0].Location.x = 3;
