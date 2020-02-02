@@ -88,7 +88,7 @@ void InitAssetsMapa3() { //inicializamos los assets
 
 	//posicion inicial de cada sprite al empezar el juego 
 	if (llaveConseguida[2] == false) {
-		assetsmapa3.llaves[2].Location.x = 125.f;
+		assetsmapa3.llaves[2].Location.x = 138.f;
 		assetsmapa3.llaves[2].Location.y = 40.f;
 	}
 
