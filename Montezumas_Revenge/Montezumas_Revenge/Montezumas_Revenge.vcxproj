@@ -184,6 +184,7 @@
     <Text Include="escalera2.txt" />
     <Text Include="escaleras.txt" />
     <Text Include="key.txt" />
+    <Text Include="pinchos.txt" />
     <Text Include="PlayerIdle.txt" />
     <Text Include="PlayerIdle2.txt" />
     <Text Include="portal.txt" />

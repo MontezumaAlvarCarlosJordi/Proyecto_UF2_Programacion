@@ -19,7 +19,7 @@ void InitRoom1() {
 
 void InitRoom3() {
 
-	InitEnemy2();
+	InitEnemy3();
 
 	InitAssetsMapa3();
 

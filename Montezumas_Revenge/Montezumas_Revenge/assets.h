@@ -15,4 +15,5 @@ struct Assets { // creamos un struct para el inventario y los sprites de los obj
 void DrawAssets();
 void CleanAssets();
 void InitAssetsMapa1();
+void InitAssetsMapa2();
 void InitAssetsMapa3();

@@ -3,7 +3,8 @@
 extern char map[200][51];
 
 Enemy enemy1; //con el struct de Enemy creamos una valiable para acceder a las diferentes variables del enemigo
-Enemy enemy2[2];
+Enemy enemy2;
+Enemy enemy3[2];
 
 EEnemy statusEnemy1;
 
@@ -29,20 +30,33 @@ void InitEnemy1()
 void InitEnemy2()
 {
 	//se asocia que sprite va a ser el enemigo
-	enemy2[0].sprite.LoadSprite("snake.txt");
-	enemy2[1].sprite.LoadSprite("snake.txt");
+	enemy2.sprite.LoadSprite("pinchos.txt");
 
 	//posicion inicial al empezar el juego
-	enemy2[0].sprite.Location.x = 84.f;
-	enemy2[0].sprite.Location.y = 17.f;
-
-	enemy2[1].sprite.Location.x = 112.f;
-	enemy2[1].sprite.Location.y = 45.f;
+	enemy2.sprite.Location.x = 30.f;
+	enemy2.sprite.Location.y = 42.f;
 
 	// y añadimos el sprite al sistema de colisiones
-	Sprite::AddToCollisionSystem(enemy2[0].sprite, "Snake1");
+	Sprite::AddToCollisionSystem(enemy2.sprite, "Pinchos");
+}
 
-	Sprite::AddToCollisionSystem(enemy2[1].sprite, "Snake2");
+void InitEnemy3()
+{
+	//se asocia que sprite va a ser el enemigo
+	enemy3[0].sprite.LoadSprite("snake.txt");
+	enemy3[1].sprite.LoadSprite("snake.txt");
+
+	//posicion inicial al empezar el juego
+	enemy3[0].sprite.Location.x = 84.f;
+	enemy3[0].sprite.Location.y = 17.f;
+
+	enemy3[1].sprite.Location.x = 112.f;
+	enemy3[1].sprite.Location.y = 45.f;
+
+	// y añadimos el sprite al sistema de colisiones
+	Sprite::AddToCollisionSystem(enemy3[0].sprite, "Snake1");
+
+	Sprite::AddToCollisionSystem(enemy3[1].sprite, "Snake2");
 }
 
 void CleanEnemies()
@@ -50,11 +64,11 @@ void CleanEnemies()
 	enemy1.sprite.Location.x = 300.f;
 	enemy1.sprite.Location.y = 300.f;
 
-	enemy2[0].sprite.Location.x = 300.f;
-	enemy2[0].sprite.Location.y = 300.f;
+	enemy3[0].sprite.Location.x = 300.f;
+	enemy3[0].sprite.Location.y = 300.f;
 
-	enemy2[1].sprite.Location.x = 300.f;
-	enemy2[1].sprite.Location.y = 300.f;
+	enemy3[1].sprite.Location.x = 300.f;
+	enemy3[1].sprite.Location.y = 300.f;
 }
 
 
@@ -87,6 +101,6 @@ void DrawEnemy() { //y la funcion para dibujarlo
 	FASG::WriteSpriteBuffer(enemy1.sprite.Location.x, enemy1.sprite.Location.y, enemy1.sprite);
 
 	for (int i = 0; i < 2; i++) {
-		FASG::WriteSpriteBuffer(enemy2[i].sprite.Location.x, enemy2[i].sprite.Location.y, enemy2[i].sprite);
+		FASG::WriteSpriteBuffer(enemy3[i].sprite.Location.x, enemy3[i].sprite.Location.y, enemy3[i].sprite);
 	}
 }

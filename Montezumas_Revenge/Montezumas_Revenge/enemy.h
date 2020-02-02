@@ -26,3 +26,4 @@ void DrawEnemy();
 void CleanEnemies();
 void InitEnemy1();
 void InitEnemy2();
+void InitEnemy3();

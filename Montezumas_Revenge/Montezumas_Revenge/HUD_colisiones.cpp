@@ -81,7 +81,7 @@ void miColision(std::string tag1, std::string tag2)
 		for (int i = 0; i < 5; i++) {
 			if (inventory[i] == 'A') {
 
-				puertaAbierta[1] = true;
+				puertaAbierta[2] = true;
 				puertas[2].Location.x = 210;
 				puertas[2].Location.y = 1;
 				assetsmapa1.llaves[1].Location.x = 210;
@@ -97,7 +97,7 @@ void miColision(std::string tag1, std::string tag2)
 		for (int i = 0; i < 5; i++) {
 			if (inventory[i] == 'R') {
 
-				puertaAbierta[2] = true;
+				puertaAbierta[1] = true;
 				puertas[3].Location.x = 210;
 				puertas[3].Location.y = 1;
 				assetsmapa3.llaves[2].Location.x = 210;
