@@ -136,7 +136,10 @@ void miColision(std::string tag1, std::string tag2)
 		room = ROOM1;
 		cambioDeMapa = true;
 	}
-
+	if ((tag1 == "Player" && tag2 == "portalDe2aFIN") || (tag1 == "portalDe2aFIN" && tag2 == "Player")) {
+		gameOver = true;
+	}
+	
 
 	
 

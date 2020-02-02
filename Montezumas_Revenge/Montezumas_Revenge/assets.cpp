@@ -7,7 +7,7 @@ Assets assetsmapa3;
 extern char inventory[5];
 //declaramos los sprites que el jugador no almacena en su inventario
 Sprite escalerasMapa[3] = { Sprite("escaleras.txt"), Sprite("escaleras.txt"), Sprite("escalera2.txt") };
-Sprite puertas[7] = { Sprite("puerta.txt"),  Sprite("portal.txt"), Sprite("puertaAzul.txt"), Sprite("puertaRoja.txt"), Sprite("portal.txt"), Sprite("portal.txt") ,  Sprite("portal.txt") };
+Sprite puertas[8] = { Sprite("puerta.txt"),  Sprite("portal.txt"), Sprite("puertaAzul.txt"), Sprite("puertaRoja.txt"), Sprite("portal.txt"), Sprite("portal.txt") ,  Sprite("portal.txt"), Sprite("portal.txt") };
 extern bool puertaAbierta[3];
 extern bool llaveConseguida[3];
 
@@ -84,14 +84,19 @@ void InitAssetsMapa1() { //inicializamos los assets
 void InitAssetsMapa2()
 {
 	puertas[6].LoadSprite("portal.txt");
+	puertas[7].LoadSprite("portal.txt");
 
 	puertas[6].Location.x = 200.f;
 	puertas[6].Location.y = 12.f;
+
+	puertas[7].Location.x = 1.f;
+	puertas[7].Location.y = 25.f;
 
 	escalerasMapa[0].Location.x = 68.f;
 	escalerasMapa[0].Location.y = 26.f;
 
 	Sprite::AddToCollisionSystem(puertas[6], "portalDe2a1");
+	Sprite::AddToCollisionSystem(puertas[7], "portalDe2aFIN");
 }
 
 void InitAssetsMapa3() { //inicializamos los assets
