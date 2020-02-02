@@ -117,5 +117,8 @@
     <Text Include="sombrero.txt">
       <Filter>Archivos de recursos</Filter>
     </Text>
+    <Text Include="snake.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
   </ItemGroup>
 </Project>

@@ -1,10 +1,9 @@
 #include "enemy.h"
-#include "map.h"
-
 
 extern char map[200][51];
 
 Enemy enemy1; //con el struct de Enemy creamos una valiable para acceder a las diferentes variables del enemigo
+Enemy enemy2;
 
 EEnemy statusEnemy1;
 
@@ -27,10 +26,26 @@ void InitEnemy1()
 		Sprite::AddToCollisionSystem(enemy1.sprite, "Enemy1");
 }
 
+void InitEnemy2()
+{
+	//se asocia que sprite va a ser el enemigo
+	enemy2.sprite.LoadSprite("snake.txt");
+
+	//posicion inicial al empezar el juego
+	enemy2.sprite.Location.x = 34.f;
+	enemy2.sprite.Location.y = 100.f;
+
+	// y añadimos el sprite al sistema de colisiones
+	Sprite::AddToCollisionSystem(enemy2.sprite, "Enemy2");
+}
+
 void CleanEnemies()
 {
 	enemy1.sprite.Location.x = 300.f;
 	enemy1.sprite.Location.y = 300.f;
+
+	enemy2.sprite.Location.x = 300.f;
+	enemy2.sprite.Location.y = 300.f;
 }
 
 
@@ -56,12 +71,10 @@ void MoveEnemy() { //creamos la funcion para crear el movimiento del enemigo
 		enemy1.sprite.Location.x += enemy1.speed * FASG::GetDeltaTime();
 		break;
 	}
-	
-
 }
 
 void DrawEnemy() { //y la funcion para dibujarlo
 
 	FASG::WriteSpriteBuffer(enemy1.sprite.Location.x, enemy1.sprite.Location.y, enemy1.sprite);
-
+	FASG::WriteSpriteBuffer(enemy2.sprite.Location.x, enemy2.sprite.Location.y, enemy2.sprite);
 }

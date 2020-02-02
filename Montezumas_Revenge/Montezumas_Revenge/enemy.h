@@ -1,5 +1,6 @@
 #pragma once
 #include "FAriasSimpleGraphics.h"
+#include "map.h"
 
 using namespace FASG;
 const int MAX_DISTANCE = 80;
@@ -23,3 +24,5 @@ enum EEnemy //estados del enemigo
 void MoveEnemy();
 void DrawEnemy();
 void CleanEnemies();
+void InitEnemy1();
+void InitEnemy2();

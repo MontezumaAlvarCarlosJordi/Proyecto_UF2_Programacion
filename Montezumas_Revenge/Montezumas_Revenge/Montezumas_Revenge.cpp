@@ -45,14 +45,14 @@ int main()
 			case ROOM1:
 				CleanAssets();
 				CleanEnemies();
-				InitWorld();
+				InitRoom1();
 				cambioDeMapa = false;
 				break;
 
 			case ROOM2:
 				CleanAssets();
 				CleanEnemies();
-				SecondRoom();
+				InitRoom2();
 				cambioDeMapa = false;
 				break;
 
@@ -66,10 +66,10 @@ int main()
 			}
 		}
 		
-		InputPlayer(gameOver);
 		DrawMap();
 		DrawAssets();
 		MoveEnemy();
+		InputPlayer(gameOver);
 		DrawPlayer();
 		DrawEnemy();
 		FASG::RenderFrame();

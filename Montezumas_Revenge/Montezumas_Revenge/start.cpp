@@ -1,8 +1,8 @@
 #include "start.h"
-#include "HUD_colisiones.h"
-#include "map.h"
 
-void InitWorld() {
+
+
+void InitRoom1() {
 
 	InitPlayer();
 
@@ -19,4 +19,12 @@ void InitWorld() {
 	Sprite::SetCollisionCallback(miColision);
 }
 
+void InitRoom2() {
 
+	InitEnemy2();
+
+	InitAssetsMapa2();
+
+	SecondRoom();
+	Sprite::SetCollisionCallback(miColision);
+}

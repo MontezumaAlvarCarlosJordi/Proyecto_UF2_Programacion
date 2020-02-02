@@ -37,7 +37,6 @@ void InputPlayer(bool &gameOver) { //todo a lo que se refiere los Inputs del jug
 	if (FASG::IsKeyDown('X')) {
 		
 		gameOver = true;
-
 	}
 	
 	if(upDown == true){ //subir y bajar escaleras
@@ -81,9 +80,6 @@ void InputPlayer(bool &gameOver) { //todo a lo que se refiere los Inputs del jug
 		player1.speedY = JUMP_Y_IMPULSE;
 		onAir = true;
 	}
-
-	
-
 }
 
 void DrawPlayer() { //dibujar al player en el mapa

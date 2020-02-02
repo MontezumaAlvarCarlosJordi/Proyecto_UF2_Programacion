@@ -191,6 +191,7 @@
     <Text Include="puertaAzul.txt" />
     <Text Include="puertaRoja.txt" />
     <Text Include="redKey.txt" />
+    <Text Include="snake.txt" />
     <Text Include="sombrero.txt" />
     <Text Include="textoMenu.txt" />
   </ItemGroup>

@@ -1,5 +1,7 @@
 #pragma once
 #include "FAriasSimpleGraphics.h"
+#include "start.h"
+#include "map.h"
 
 using namespace FASG;
 
@@ -12,3 +14,5 @@ struct Assets { // creamos un struct para el inventario y los sprites de los obj
 
 void DrawAssets();
 void CleanAssets();
+void InitAssetsMapa1();
+void InitAssetsMapa2();

@@ -88,10 +88,10 @@ void FirstRoom(){
 		map[151 + i][35] = 'B';
 	}
 
-	for (int i = 0; i < 21; i++) {
-		map[91 + i][21] = 'S';
-		map[16 + i][35] = 'S';
-		map[164 + i][35] = 'S';
+	for (int i = 0; i < 14; i++) {
+		map[94 + i][21] = 'S';
+		map[19 + i][35] = 'S';
+		map[167 + i][35] = 'S';
 	}
 
 	for (int i = 0; i < 5; i++) {
@@ -144,6 +144,9 @@ void ThirdRoom()
 
 	for (int i = 0; i < 200; i++)
 			map[i][49] = 'X';
+
+	for (int i = 110; i < 124; i++)
+		map[i][21] = 'S';
 	
 	for (int i = 0; i < 30; i++)
 		for (int j = 21; j < 49; j++)
@@ -152,6 +155,8 @@ void ThirdRoom()
 	for (int i = 170; i < W; i++)
 		for (int j = 7; j < 35; j++)
 			map[i][j] = 'X';
+
+
 }
 
 
