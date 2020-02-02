@@ -29,9 +29,7 @@ void miColision(std::string tag1, std::string tag2)
 			gameOver = true;
 		}
 
-		for (int i = 0; i < 3; i++) {
-			puertaAbierta[i] = false;
-		}
+		
 	}
 	//colisiones entre puerta y player para abrirlas cuando haya posesion de llave
 	if ((tag1 == "Player" && tag2 == "puerta") || (tag1 == "puerta" && tag2 == "Player")) {
@@ -43,6 +41,7 @@ void miColision(std::string tag1, std::string tag2)
 				puertas[0].Location.y = 1;
 				assetsmapa1.llaves[0].Location.x = 210;
 				assetsmapa1.llaves[0].Location.y = 1;
+				assetsmapa1.inventory[i] = 'V';
 
 			}
 		}
@@ -58,7 +57,7 @@ void miColision(std::string tag1, std::string tag2)
 				puertas[2].Location.y = 1;
 				assetsmapa1.llaves[1].Location.x = 210;
 				assetsmapa1.llaves[1].Location.y = 1;
-
+				assetsmapa1.inventory[i] = 'V';
 			}
 		}
 
@@ -73,6 +72,7 @@ void miColision(std::string tag1, std::string tag2)
 				puertas[3].Location.y = 1;
 				assetsmapa1.llaves[2].Location.x = 210;
 				assetsmapa1.llaves[2].Location.y = 1;
+				assetsmapa1.inventory[i] = 'V';
 			}
 		}
 	}
@@ -111,12 +111,12 @@ void miColision(std::string tag1, std::string tag2)
 
 	//y las colisiones para recolectar las llaves
 	if ((tag1 == "Player" && tag2 == "blueKey") || (tag1 == "blueKey" && tag2 == "Player")) {
-		assetsmapa1.llaves[1].Location.x = 5;
-		assetsmapa1.llaves[1].Location.y = 1;
+		
 
 		for (int i = 0; i < 5; i++) {
 			if (assetsmapa1.inventory[i] == 'V') {
-
+				assetsmapa1.llaves[1].Location.x = 5 + (8 * i);
+				assetsmapa1.llaves[1].Location.y = 1;
 				assetsmapa1.inventory[i] = 'A';
 				break;
 
@@ -127,12 +127,12 @@ void miColision(std::string tag1, std::string tag2)
 	}
 
 	if ((tag1 == "Player" && tag2 == "redKey") || (tag1 == "redKey" && tag2 == "Player")) {
-		assetsmapa1.llaves[2].Location.x = 5;
-		assetsmapa1.llaves[2].Location.y = 1;
+		
 
 		for (int i = 0; i < 5; i++) {
 			if (assetsmapa1.inventory[i] == 'V') {
-
+				assetsmapa1.llaves[2].Location.x = 5 + (8 * i);
+				assetsmapa1.llaves[2].Location.y = 1;
 				assetsmapa1.inventory[i] = 'R';
 				break;
 
@@ -143,12 +143,12 @@ void miColision(std::string tag1, std::string tag2)
 	}
 
 	if ((tag1 == "Player" && tag2 == "key") || (tag1 == "key" && tag2 == "Player")) {
-		assetsmapa1.llaves[0].Location.x = 5;
-		assetsmapa1.llaves[0].Location.y = 1;
+		
 
 		for (int i = 0; i < 5; i++) {
 			if (assetsmapa1.inventory[i] == 'V') {
-
+				assetsmapa1.llaves[0].Location.x = 5 + (8 * i);
+				assetsmapa1.llaves[0].Location.y = 1;
 				assetsmapa1.inventory[i] = 'L';
 				break;
 
