@@ -22,11 +22,9 @@ ERooms room = ROOM1;
 
 int main()
 {
-	
 	FASG::InitConsole(W, H);
 	FASG::ShowConsoleCursor(false);
 	FASG::SetFontSizeRatio(FASG::ConsoleFontRatios::_7x12);
-	
 
 	while (!gameStart) //entramos en el bucle de la pantalla del inicio
 	{
@@ -66,7 +64,6 @@ int main()
 				InitRoom3();
 				cambioDeMapa = false;
 				break;
-
 			}
 		}
 		//imprimimos toda la pantalla con los diferentes sprites:
@@ -85,8 +82,5 @@ int main()
 		Final();
 		FASG::RenderFrame();
 	}
-
-	
-
 	FASG::DestroyConsole();
 }
